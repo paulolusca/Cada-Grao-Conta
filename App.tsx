@@ -316,7 +316,7 @@ export default function App() {
                                 <img src={cat.image} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
                                     <h3 className="text-white font-bold text-xl">{cat.title}</h3>
-                                    <p className="hidden md:block text-gray-200 text-sm">{cat.description}</p>
+                                    <p className="text-gray-200 text-xs md:text-sm">{cat.description}</p>
                                 </div>
                             </div>
                         ))}
