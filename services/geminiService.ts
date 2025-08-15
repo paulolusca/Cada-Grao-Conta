@@ -3,11 +3,9 @@ import { GeneratedRecipe } from "../types";
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string;
 
-if (!API_KEY) {
-    throw new Error("VITE_GEMINI_API_KEY is not set in the environment variables.");
-}
-
-const genAI = new GoogleGenAI(API_KEY);
+// Moved instantiation inside the function to avoid app crash on start
+// if the API key is a placeholder.
+// const genAI = new GoogleGenAI(API_KEY);
 
 const generationConfig = {
     temperature: 0.9,
@@ -36,6 +34,11 @@ const safetySettings = [
 ];
 
 export async function generateRecipeWithAI(ingredients: string): Promise<GeneratedRecipe> {
+    if (!API_KEY || API_KEY === "coloque_sua_chave_aqui") {
+        throw new Error("A chave da API do Gemini não está configurada. Por favor, adicione-a ao arquivo .env.local.");
+    }
+
+    const genAI = new GoogleGenAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro", generationConfig, safetySettings });
 
     const prompt = `
