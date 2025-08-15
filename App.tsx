@@ -16,7 +16,9 @@ import {
     ArrowLeft, 
     Trash2, 
     Download,
-    LoaderCircle
+    LoaderCircle,
+    Moon,
+    Sun
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode, GeneratedRecipe } from './types';
@@ -48,7 +50,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, isActive, onClick }) => 
         onClick={onClick}
         aria-label={`Navegar para ${label}`}
         className={`flex flex-col items-center justify-center w-full pt-2 pb-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg ${
-            isActive ? 'text-brand-primary' : 'text-brand-secondary hover:text-brand-primary'
+            isActive ? 'text-brand-primary dark:text-dark-accent' : 'text-brand-secondary dark:text-dark-secondary hover:text-dark-primary'
         }`}
     >
         <IconWrapper>{icon}</IconWrapper>
@@ -66,11 +68,11 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onClick }) => (
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && onClick()}
         aria-label={`Ver receita: ${recipe.name}`}
-        className="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500"
+        className="bg-white dark:bg-dark-bg rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500"
     >
         <img className="h-40 w-full object-cover" src={recipe.image} alt={recipe.name} />
         <div className="p-4">
-            <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
+            <h3 className="font-semibold text-brand-primary dark:text-dark-primary">{recipe.name}</h3>
         </div>
     </div>
 );
@@ -78,7 +80,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onClick }) => (
 
 const Spinner: React.FC = () => (
     <div className="flex justify-center items-center p-8">
-        <LoaderCircle className="w-12 h-12 text-brand-primary animate-spin" />
+        <LoaderCircle className="w-12 h-12 text-brand-primary dark:text-dark-accent animate-spin" />
     </div>
 );
 
@@ -92,6 +94,7 @@ export default function App() {
     const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [viewMode, setViewMode] = useState<ViewMode>('mobile');
+    const [isDarkMode, setIsDarkMode] = useState(false);
     
     // Firebase & Favorites State
     const [user, setUser] = useState<User | null>(null);
@@ -145,6 +148,16 @@ export default function App() {
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user, isFirebaseReady]);
+
+    // ======== DARK MODE EFFECT ======== //
+    useEffect(() => {
+        const root = window.document.documentElement;
+        if (isDarkMode) {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
+    }, [isDarkMode]);
 
     // ======== DERIVED STATE & MEMOIZED VALUES ======== //
     const favoriteRecipeIds = useMemo(() => new Set(favoriteRecipes.map(r => r.id)), [favoriteRecipes]);
@@ -231,6 +244,10 @@ export default function App() {
         }
     };
 
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+    };
+
     const handleGenerateRecipe = async () => {
         if (!aiIngredients.trim()) {
             setGenerationError("Por favor, insira alguns ingredientes.");
@@ -256,7 +273,7 @@ export default function App() {
         if (searchQuery) {
             return (
                 <div className="p-4 md:p-6">
-                    <h2 className="text-2xl font-bold text-brand-primary mb-4">Resultados da Busca</h2>
+                    <h2 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-4">Resultados da Busca</h2>
                     {filteredRecipes.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             {filteredRecipes.map(recipe => (
@@ -264,7 +281,7 @@ export default function App() {
                             ))}
                         </div>
                     ) : (
-                        <p className="text-brand-primary">Nenhuma receita encontrada para "{searchQuery}".</p>
+                        <p className="text-brand-primary dark:text-dark-primary">Nenhuma receita encontrada para "{searchQuery}".</p>
                     )}
                 </div>
             );
@@ -276,18 +293,18 @@ export default function App() {
             return (
                  <div className="p-4 md:p-6" id={`recipe-pdf-content-${selectedRecipe.id}`}>
                     <img src={selectedRecipe.image} alt={selectedRecipe.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"/>
-                    <h2 className="text-3xl font-bold text-brand-primary mb-2">{selectedRecipe.name}</h2>
-                    <p className="text-brand-secondary font-medium mb-4">{selectedRecipe.category}</p>
+                    <h2 className="text-3xl font-bold text-brand-primary dark:text-dark-primary mb-2">{selectedRecipe.name}</h2>
+                    <p className="text-brand-secondary dark:text-dark-secondary font-medium mb-4">{selectedRecipe.category}</p>
 
                     <div className="mb-6">
-                        <h3 className="text-xl font-semibold text-brand-primary mb-2">Ingredientes</h3>
-                        <ul className="list-disc list-inside text-brand-primary space-y-1">
+                        <h3 className="text-xl font-semibold text-brand-primary dark:text-dark-primary mb-2">Ingredientes</h3>
+                        <ul className="list-disc list-inside text-brand-primary dark:text-dark-primary space-y-1">
                             {selectedRecipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
                         </ul>
                     </div>
                      <div>
-                        <h3 className="text-xl font-semibold text-brand-primary mb-2">Modo de Preparo</h3>
-                        <p className="text-brand-primary leading-relaxed whitespace-pre-line">{selectedRecipe.instructions}</p>
+                        <h3 className="text-xl font-semibold text-brand-primary dark:text-dark-primary mb-2">Modo de Preparo</h3>
+                        <p className="text-brand-primary dark:text-dark-primary leading-relaxed whitespace-pre-line">{selectedRecipe.instructions}</p>
                     </div>
                 </div>
             );
@@ -296,7 +313,7 @@ export default function App() {
         if (selectedCategory) {
             return (
                 <div className="p-4 md:p-6">
-                    <h2 className="text-2xl font-bold text-brand-primary mb-4">{selectedCategory.title}</h2>
+                    <h2 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-4">{selectedCategory.title}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                         {selectedCategory.recipes.map(recipe => (
                            <RecipeCard key={recipe.id} recipe={recipe} onClick={() => handleSelectRecipe(recipe)} />
@@ -325,12 +342,12 @@ export default function App() {
             case 'tips':
                 return (
                     <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Dicas de Reaproveitamento</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-4">Dicas de Reaproveitamento</h2>
                         <ul className="space-y-4">
                             {repurposingTips.map((tip, index) => (
                                 <li key={index} className="flex items-start bg-white p-4 rounded-xl shadow-sm">
-                                    <Lightbulb className="w-6 h-6 text-amber-500 mr-4 mt-1 flex-shrink-0" />
-                                    <p className="text-brand-primary">{tip}</p>
+                                    <Lightbulb className="w-6 h-6 text-amber-500 dark:text-dark-accent mr-4 mt-1 flex-shrink-0" />
+                                    <p className="text-brand-primary dark:text-dark-primary">{tip}</p>
                                 </li>
                             ))}
                         </ul>
@@ -339,7 +356,7 @@ export default function App() {
             case 'videos':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Vídeos Educativos</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-4">Vídeos Educativos</h2>
                         <div className="space-y-6">
                             {educationalVideos.map(video => (
                                 <div key={video.id} className="bg-white p-4 rounded-xl shadow-sm overflow-hidden">
@@ -353,7 +370,7 @@ export default function App() {
                                             allowFullScreen
                                         ></iframe>
                                     </div>
-                                    <h3 className="font-semibold text-brand-primary">{video.title}</h3>
+                                    <h3 className="font-semibold text-brand-primary dark:text-dark-primary">{video.title}</h3>
                                     <p className="text-sm text-gray-600 mt-1">{video.description}</p>
                                 </div>
                             ))}
@@ -363,7 +380,7 @@ export default function App() {
             case 'favorites':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Minhas Receitas</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-4">Minhas Receitas</h2>
                         {favoriteRecipes.length > 0 ? (
                             <div className="space-y-4">
                                 {favoriteRecipes.map(recipe => (
@@ -371,7 +388,7 @@ export default function App() {
                                         <div className="flex items-center" onClick={() => handleSelectRecipe(recipe)} >
                                           <img src={recipe.image} alt={recipe.name} className="w-16 h-16 object-cover rounded-lg mr-4 cursor-pointer"/>
                                           <div className="cursor-pointer">
-                                              <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
+                                              <h3 className="font-semibold text-brand-primary dark:text-dark-primary">{recipe.name}</h3>
                                               <p className="text-sm text-gray-500">{recipe.category}</p>
                                           </div>
                                         </div>
@@ -384,7 +401,7 @@ export default function App() {
                         ) : (
                              <div className="text-center py-10">
                                  <Heart className="w-12 h-12 text-brand-secondary mx-auto mb-4"/>
-                                <p className="text-brand-primary">Você ainda não favoritou nenhuma receita.</p>
+                                <p className="text-brand-primary dark:text-dark-primary">Você ainda não favoritou nenhuma receita.</p>
                                 <p className="text-sm text-gray-600">Clique no coração nas receitas para guardá-las aqui!</p>
                             </div>
                         )}
@@ -393,9 +410,9 @@ export default function App() {
              case 'generate':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Gerar Receita ✨</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-4">Gerar Receita ✨</h2>
                         <div className="bg-white p-4 rounded-xl shadow-sm">
-                            <label htmlFor="ingredients-input" className="block text-sm font-medium text-brand-primary mb-2">Quais ingredientes você tem aí?</label>
+                            <label htmlFor="ingredients-input" className="block text-sm font-medium text-brand-primary dark:text-dark-primary mb-2">Quais ingredientes você tem aí?</label>
                             <textarea
                                 id="ingredients-input"
                                 value={aiIngredients}
@@ -421,16 +438,16 @@ export default function App() {
 
                         {generatedRecipe && (
                             <div className="mt-6 bg-white p-4 rounded-xl shadow-sm animate-fade-in">
-                                <h3 className="text-2xl font-bold text-brand-primary mb-2">{generatedRecipe.name}</h3>
+                                <h3 className="text-2xl font-bold text-brand-primary dark:text-dark-primary mb-2">{generatedRecipe.name}</h3>
                                 <div className="mb-4">
-                                    <h4 className="text-lg font-semibold text-brand-primary mb-2">Ingredientes</h4>
-                                    <ul className="list-disc list-inside text-brand-primary space-y-1">
+                                    <h4 className="text-lg font-semibold text-brand-primary dark:text-dark-primary mb-2">Ingredientes</h4>
+                                    <ul className="list-disc list-inside text-brand-primary dark:text-dark-primary space-y-1">
                                         {generatedRecipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
                                     </ul>
                                 </div>
                                  <div>
-                                    <h4 className="text-lg font-semibold text-brand-primary mb-2">Modo de Preparo</h4>
-                                    <p className="text-brand-primary leading-relaxed whitespace-pre-line">{generatedRecipe.instructions}</p>
+                                    <h4 className="text-lg font-semibold text-brand-primary dark:text-dark-primary mb-2">Modo de Preparo</h4>
+                                    <p className="text-brand-primary dark:text-dark-primary leading-relaxed whitespace-pre-line">{generatedRecipe.instructions}</p>
                                 </div>
                             </div>
                         )}
@@ -485,6 +502,9 @@ export default function App() {
                         </button>
                         <button onClick={() => setViewMode('desktop')} aria-label="Visualização desktop" className={`p-2 rounded-full ${viewMode === 'desktop' ? 'bg-amber-100 text-amber-600' : 'text-gray-400 hover:bg-gray-100'} focus:outline-none focus:ring-2 focus:ring-amber-500`}>
                             <Monitor className="w-5 h-5"/>
+                        </button>
+                        <button onClick={toggleDarkMode} aria-label="Alternar modo escuro" className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            {isDarkMode ? <Sun className="w-5 h-5 text-amber-500" /> : <Moon className="w-5 h-5 text-brand-primary dark:text-dark-primary" />}
                         </button>
                     </div>
                  </header>
