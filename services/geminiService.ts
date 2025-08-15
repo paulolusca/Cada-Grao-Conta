@@ -38,7 +38,7 @@ export async function generateRecipeWithAI(ingredients: string): Promise<Generat
         throw new Error("A chave da API do Gemini não está configurada. Por favor, adicione-a ao arquivo .env.local.");
     }
 
-    const genAI = new GoogleGenAI(API_KEY);
+    const genAI = new GoogleGenAI({ apiKey: API_KEY });
     const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro", generationConfig, safetySettings });
 
     const prompt = `
