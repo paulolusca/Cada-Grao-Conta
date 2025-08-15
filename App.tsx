@@ -1,11 +1,9 @@
-
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import type { User } from 'firebase/auth';
 import type { Unsubscribe } from 'firebase/firestore';
 import { 
     Home, 
     Lightbulb, 
-    Youtube, 
     Heart, 
     Sparkles, 
     BookHeart, 
@@ -16,13 +14,16 @@ import {
     ArrowLeft, 
     Trash2, 
     Download,
-    LoaderCircle
+    LoaderCircle,
+    Info,
+    Moon,
+    Sun
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode, GeneratedRecipe } from './types';
 import { categoriesData, allRecipes, repurposingTips, educationalVideos } from './constants';
-import * as firebaseService from './services/firebaseService';
-import { generateRecipeWithAI } from './services/geminiService';
+// import * as firebaseService from './services/firebaseService';
+// import { generateRecipeWithAI } from './services/geminiService';
 
 // Declare global variable for html2pdf library
 declare const html2pdf: any;
@@ -48,7 +49,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, isActive, onClick }) => 
         onClick={onClick}
         aria-label={`Navegar para ${label}`}
         className={`flex flex-col items-center justify-center w-full pt-2 pb-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg ${
-            isActive ? 'text-brand-primary' : 'text-brand-secondary hover:text-brand-primary'
+            isActive ? 'text-brand-primary' : 'text-brand-secondary dark:text-gray-400 hover:text-brand-primary dark:hover:text-white'
         }`}
     >
         <IconWrapper>{icon}</IconWrapper>
@@ -66,11 +67,11 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onClick }) => (
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && onClick()}
         aria-label={`Ver receita: ${recipe.name}`}
-        className="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500"
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500"
     >
         <img className="h-40 w-full object-cover" src={recipe.image} alt={recipe.name} />
         <div className="p-4">
-            <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
+            <h3 className="font-semibold text-brand-primary dark:text-gray-200">{recipe.name}</h3>
         </div>
     </div>
 );
@@ -92,6 +93,7 @@ export default function App() {
     const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [viewMode, setViewMode] = useState<ViewMode>('mobile');
+    const [isDarkMode, setIsDarkMode] = useState(false);
     
     // Firebase & Favorites State
     const [user, setUser] = useState<User | null>(null);
@@ -105,46 +107,46 @@ export default function App() {
     const [aiIngredients, setAiIngredients] = useState('');
 
     // ======== FIREBASE & AUTH EFFECT ======== //
-    useEffect(() => {
-        try {
-            const { auth } = firebaseService.initFirebase();
-            firebaseService.authSignIn(auth)
-                .then((signedInUser) => {
-                    setUser(signedInUser);
-                    setIsFirebaseReady(true);
-                })
-                .catch(error => {
-                    console.error("Authentication failed:", error);
-                    setIsFirebaseReady(true); // Still proceed, will use local storage
-                });
-        } catch (error) {
-            console.error("Firebase setup error:", error);
-            setIsFirebaseReady(true); // Allow app to run with fallback
-        }
-    }, []);
+    // useEffect(() => {
+    //     try {
+    //         const { auth } = firebaseService.initFirebase();
+    //         firebaseService.authSignIn(auth)
+    //             .then((signedInUser) => {
+    //                 setUser(signedInUser);
+    //                 setIsFirebaseReady(true);
+    //             })
+    //             .catch(error => {
+    //                 console.error("Authentication failed:", error);
+    //                 setIsFirebaseReady(true); // Still proceed, will use local storage
+    //             });
+    //     } catch (error) {
+    //         console.error("Firebase setup error:", error);
+    //         setIsFirebaseReady(true); // Allow app to run with fallback
+    //     }
+    // }, []);
 
     // ======== FIRESTORE FAVORITES LISTENER ======== //
-    useEffect(() => {
-        if (isFirebaseReady) {
-            let unsubscribe: Unsubscribe = () => {};
-            if (user?.uid) {
-                // If user is available, use Firestore
-                unsubscribe = firebaseService.onFavoritesChange(user.uid, setFavoriteRecipes);
-            } else {
-                // Fallback for when user is not available (e.g., auth failed)
-                console.warn("User not available, using Local Storage for favorites.");
-                try {
-                    const localFavorites = localStorage.getItem('favoriteRecipes');
-                    setFavoriteRecipes(localFavorites ? JSON.parse(localFavorites) : []);
-                } catch (e) {
-                    console.error("Error reading favorites from Local Storage:", e);
-                    setFavoriteRecipes([]);
-                }
-            }
-            return () => unsubscribe();
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [user, isFirebaseReady]);
+    // useEffect(() => {
+    //     if (isFirebaseReady) {
+    //         let unsubscribe: Unsubscribe = () => {};
+    //         if (user?.uid) {
+    //             // If user is available, use Firestore
+    //             unsubscribe = firebaseService.onFavoritesChange(user.uid, setFavoriteRecipes);
+    //         } else {
+    //             // Fallback for when user is not available (e.g., auth failed)
+    //             console.warn("User not available, using Local Storage for favorites.");
+    //             try {
+    //                 const localFavorites = localStorage.getItem('favoriteRecipes');
+    //                 setFavoriteRecipes(localFavorites ? JSON.parse(localFavorites) : []);
+    //             } catch (e) {
+    //                 console.error("Error reading favorites from Local Storage:", e);
+    //                 setFavoriteRecipes([]);
+    //             }
+    //         }
+    //         return () => unsubscribe();
+    //     }
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [user, isFirebaseReady]);
 
     // ======== DERIVED STATE & MEMOIZED VALUES ======== //
     const favoriteRecipeIds = useMemo(() => new Set(favoriteRecipes.map(r => r.id)), [favoriteRecipes]);
@@ -184,38 +186,38 @@ export default function App() {
         }
     };
     
-    const toggleFavorite = useCallback(async (recipe: Recipe) => {
-        if (!isFirebaseReady) {
-            console.log("Firebase not ready. Cannot modify favorites.");
-            return;
-        }
+    // const toggleFavorite = useCallback(async (recipe: Recipe) => {
+    //     if (!isFirebaseReady) {
+    //         console.log("Firebase not ready. Cannot modify favorites.");
+    //         return;
+    //     }
 
-        const isFavorited = favoriteRecipeIds.has(recipe.id);
+    //     const isFavorited = favoriteRecipeIds.has(recipe.id);
 
-        // Optimistic UI update
-        const newFavorites = isFavorited
-            ? favoriteRecipes.filter(r => r.id !== recipe.id)
-            : [...favoriteRecipes, recipe];
-        setFavoriteRecipes(newFavorites);
+    //     // Optimistic UI update
+    //     const newFavorites = isFavorited
+    //         ? favoriteRecipes.filter(r => r.id !== recipe.id)
+    //         : [...favoriteRecipes, recipe];
+    //     setFavoriteRecipes(newFavorites);
 
-        try {
-            if (user?.uid) {
-                if (isFavorited) {
-                    await firebaseService.removeFavoriteRecipe(user.uid, recipe.id);
-                } else {
-                    await firebaseService.addFavoriteRecipe(user.uid, recipe);
-                }
-            } else {
-                // If no user, force local storage operation
-                throw new Error("No user, using local storage fallback.");
-            }
-        } catch (error) {
-            console.error("Favorite operation failed, UI reverted:", error);
-            // Revert UI on failure
-            setFavoriteRecipes(favoriteRecipes);
-        }
+    //     try {
+    //         if (user?.uid) {
+    //             if (isFavorited) {
+    //                 await firebaseService.removeFavoriteRecipe(user.uid, recipe.id);
+    //             } else {
+    //                 await firebaseService.addFavoriteRecipe(user.uid, recipe);
+    //             }
+    //         } else {
+    //             // If no user, force local storage operation
+    //             throw new Error("No user, using local storage fallback.");
+    //         }
+    //     } catch (error) {
+    //         console.error("Favorite operation failed, UI reverted:", error);
+    //         // Revert UI on failure
+    //         setFavoriteRecipes(favoriteRecipes);
+    //     }
 
-    }, [isFirebaseReady, favoriteRecipeIds, favoriteRecipes, user]);
+    // }, [isFirebaseReady, favoriteRecipeIds, favoriteRecipes, user]);
 
     const handleExportPdf = (recipe: Recipe) => {
         const element = document.getElementById(`recipe-pdf-content-${recipe.id}`);
@@ -231,23 +233,23 @@ export default function App() {
         }
     };
 
-    const handleGenerateRecipe = async () => {
-        if (!aiIngredients.trim()) {
-            setGenerationError("Por favor, insira alguns ingredientes.");
-            return;
-        }
-        setIsGenerating(true);
-        setGenerationError(null);
-        setGeneratedRecipe(null);
-        try {
-            const result = await generateRecipeWithAI(aiIngredients);
-            setGeneratedRecipe(result);
-        } catch (error) {
-            setGenerationError(error instanceof Error ? error.message : "Ocorreu um erro desconhecido.");
-        } finally {
-            setIsGenerating(false);
-        }
-    };
+    // const handleGenerateRecipe = async () => {
+    //     if (!aiIngredients.trim()) {
+    //         setGenerationError("Por favor, insira alguns ingredientes.");
+    //         return;
+    //     }
+    //     setIsGenerating(true);
+    //     setGenerationError(null);
+    //     setGeneratedRecipe(null);
+    //     try {
+    //         const result = await generateRecipeWithAI(aiIngredients);
+    //         setGeneratedRecipe(result);
+    //     } catch (error) {
+    //         setGenerationError(error instanceof Error ? error.message : "Ocorreu um erro desconhecido.");
+    //     } finally {
+    //         setIsGenerating(false);
+    //     }
+    // };
 
 
     // ======== RENDER LOGIC ======== //
@@ -256,7 +258,7 @@ export default function App() {
         if (searchQuery) {
             return (
                 <div className="p-4 md:p-6">
-                    <h2 className="text-2xl font-bold text-brand-primary mb-4">Resultados da Busca</h2>
+                    <h2 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-4">Resultados da Busca</h2>
                     {filteredRecipes.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             {filteredRecipes.map(recipe => (
@@ -264,7 +266,7 @@ export default function App() {
                             ))}
                         </div>
                     ) : (
-                        <p className="text-brand-primary">Nenhuma receita encontrada para "{searchQuery}".</p>
+                        <p className="text-brand-primary dark:text-gray-400">Nenhuma receita encontrada para "{searchQuery}".</p>
                     )}
                 </div>
             );
@@ -276,18 +278,18 @@ export default function App() {
             return (
                  <div className="p-4 md:p-6" id={`recipe-pdf-content-${selectedRecipe.id}`}>
                     <img src={selectedRecipe.image} alt={selectedRecipe.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"/>
-                    <h2 className="text-3xl font-bold text-brand-primary mb-2">{selectedRecipe.name}</h2>
-                    <p className="text-brand-secondary font-medium mb-4">{selectedRecipe.category}</p>
+                    <h2 className="text-3xl font-bold text-brand-primary dark:text-gray-200 mb-2">{selectedRecipe.name}</h2>
+                    <p className="text-brand-secondary dark:text-gray-400 font-medium mb-4">{selectedRecipe.category}</p>
 
                     <div className="mb-6">
-                        <h3 className="text-xl font-semibold text-brand-primary mb-2">Ingredientes</h3>
-                        <ul className="list-disc list-inside text-brand-primary space-y-1">
+                        <h3 className="text-xl font-semibold text-brand-primary dark:text-gray-200 mb-2">Ingredientes</h3>
+                        <ul className="list-disc list-inside text-brand-primary dark:text-gray-400 space-y-1">
                             {selectedRecipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
                         </ul>
                     </div>
                      <div>
-                        <h3 className="text-xl font-semibold text-brand-primary mb-2">Modo de Preparo</h3>
-                        <p className="text-brand-primary leading-relaxed whitespace-pre-line">{selectedRecipe.instructions}</p>
+                        <h3 className="text-xl font-semibold text-brand-primary dark:text-gray-200 mb-2">Modo de Preparo</h3>
+                        <p className="text-brand-primary dark:text-gray-400 leading-relaxed whitespace-pre-line">{selectedRecipe.instructions}</p>
                     </div>
                 </div>
             );
@@ -296,7 +298,7 @@ export default function App() {
         if (selectedCategory) {
             return (
                 <div className="p-4 md:p-6">
-                    <h2 className="text-2xl font-bold text-brand-primary mb-4">{selectedCategory.title}</h2>
+                    <h2 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-4">{selectedCategory.title}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                         {selectedCategory.recipes.map(recipe => (
                            <RecipeCard key={recipe.id} recipe={recipe} onClick={() => handleSelectRecipe(recipe)} />
@@ -325,24 +327,19 @@ export default function App() {
             case 'tips':
                 return (
                     <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Dicas de Reaproveitamento</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-4">Dicas de Reaproveitamento</h2>
                         <ul className="space-y-4">
                             {repurposingTips.map((tip, index) => (
-                                <li key={index} className="flex items-start bg-white p-4 rounded-xl shadow-sm">
+                                <li key={index} className="flex items-start bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
                                     <Lightbulb className="w-6 h-6 text-amber-500 mr-4 mt-1 flex-shrink-0" />
-                                    <p className="text-brand-primary">{tip}</p>
+                                    <p className="text-brand-primary dark:text-gray-400">{tip}</p>
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                );
-            case 'videos':
-                return (
-                     <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Vídeos Educativos</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-4 mt-6">Vídeos Educativos</h2>
                         <div className="space-y-6">
                             {educationalVideos.map(video => (
-                                <div key={video.id} className="bg-white p-4 rounded-xl shadow-sm overflow-hidden">
+                                <div key={video.id} className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm overflow-hidden">
                                     <div className="aspect-w-16 aspect-h-9 mb-3">
                                         <iframe
                                             className="w-full h-full rounded-lg"
@@ -353,8 +350,8 @@ export default function App() {
                                             allowFullScreen
                                         ></iframe>
                                     </div>
-                                    <h3 className="font-semibold text-brand-primary">{video.title}</h3>
-                                    <p className="text-sm text-gray-600 mt-1">{video.description}</p>
+                                    <h3 className="font-semibold text-brand-primary dark:text-gray-200">{video.title}</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{video.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -363,16 +360,16 @@ export default function App() {
             case 'favorites':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Minhas Receitas</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-4">Minhas Receitas</h2>
                         {favoriteRecipes.length > 0 ? (
                             <div className="space-y-4">
                                 {favoriteRecipes.map(recipe => (
-                                    <div key={recipe.id} className="bg-white p-3 rounded-xl shadow-sm flex items-center justify-between">
+                                    <div key={recipe.id} className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm flex items-center justify-between">
                                         <div className="flex items-center" onClick={() => handleSelectRecipe(recipe)} >
                                           <img src={recipe.image} alt={recipe.name} className="w-16 h-16 object-cover rounded-lg mr-4 cursor-pointer"/>
                                           <div className="cursor-pointer">
-                                              <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
-                                              <p className="text-sm text-gray-500">{recipe.category}</p>
+                                              <h3 className="font-semibold text-brand-primary dark:text-gray-200">{recipe.name}</h3>
+                                              <p className="text-sm text-gray-500 dark:text-gray-400">{recipe.category}</p>
                                           </div>
                                         </div>
                                         <button onClick={() => toggleFavorite(recipe)} aria-label={`Remover ${recipe.name} dos favoritos`} className="p-2 rounded-full hover:bg-red-100 text-red-500 transition-colors focus:outline-none focus:ring-2 focus:ring-red-400">
@@ -384,8 +381,8 @@ export default function App() {
                         ) : (
                              <div className="text-center py-10">
                                  <Heart className="w-12 h-12 text-brand-secondary mx-auto mb-4"/>
-                                <p className="text-brand-primary">Você ainda não favoritou nenhuma receita.</p>
-                                <p className="text-sm text-gray-600">Clique no coração nas receitas para guardá-las aqui!</p>
+                                <p className="text-brand-primary dark:text-gray-400">Você ainda não favoritou nenhuma receita.</p>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">Clique no coração nas receitas para guardá-las aqui!</p>
                             </div>
                         )}
                     </div>
@@ -393,26 +390,26 @@ export default function App() {
              case 'generate':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Gerar Receita ✨</h2>
-                        <div className="bg-white p-4 rounded-xl shadow-sm">
-                            <label htmlFor="ingredients-input" className="block text-sm font-medium text-brand-primary mb-2">Quais ingredientes você tem aí?</label>
+                        <h2 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-4">Gerar Receita ✨</h2>
+                        <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+                            <label htmlFor="ingredients-input" className="block text-sm font-medium text-brand-primary dark:text-gray-200 mb-2">Quais ingredientes você tem aí?</label>
                             <textarea
                                 id="ingredients-input"
                                 value={aiIngredients}
                                 onChange={(e) => setAiIngredients(e.target.value)}
                                 placeholder="Ex: banana madura, pão amanhecido, ovos, leite"
-                                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition"
+                                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition bg-white dark:bg-gray-700 text-brand-primary dark:text-gray-200"
                                 rows={4}
                                 aria-label="Ingredientes para gerar receita"
                             />
-                            <button
+                            {/* <button
                                 onClick={handleGenerateRecipe}
                                 disabled={isGenerating}
                                 className="mt-4 w-full bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg flex justify-center items-center transition-colors hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary disabled:bg-gray-400"
                                 aria-label="Gerar receita com inteligência artificial"
                             >
                                 {isGenerating ? <LoaderCircle className="w-5 h-5 animate-spin"/> : 'Gerar Receita'}
-                            </button>
+                            </button> */}
                         </div>
 
                         {generationError && <p className="mt-4 text-red-600 bg-red-100 p-3 rounded-lg">{generationError}</p>}
@@ -420,20 +417,34 @@ export default function App() {
                         {isGenerating && !generatedRecipe && <Spinner />}
 
                         {generatedRecipe && (
-                            <div className="mt-6 bg-white p-4 rounded-xl shadow-sm animate-fade-in">
-                                <h3 className="text-2xl font-bold text-brand-primary mb-2">{generatedRecipe.name}</h3>
+                            <div className="mt-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm animate-fade-in">
+                                <h3 className="text-2xl font-bold text-brand-primary dark:text-gray-200 mb-2">{generatedRecipe.name}</h3>
                                 <div className="mb-4">
-                                    <h4 className="text-lg font-semibold text-brand-primary mb-2">Ingredientes</h4>
-                                    <ul className="list-disc list-inside text-brand-primary space-y-1">
+                                    <h4 className="text-lg font-semibold text-brand-primary dark:text-gray-200 mb-2">Ingredientes</h4>
+                                    <ul className="list-disc list-inside text-brand-primary dark:text-gray-400 space-y-1">
                                         {generatedRecipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
                                     </ul>
                                 </div>
                                  <div>
-                                    <h4 className="text-lg font-semibold text-brand-primary mb-2">Modo de Preparo</h4>
-                                    <p className="text-brand-primary leading-relaxed whitespace-pre-line">{generatedRecipe.instructions}</p>
+                                    <h4 className="text-lg font-semibold text-brand-primary dark:text-gray-200 mb-2">Modo de Preparo</h4>
+                                    <p className="text-brand-primary dark:text-gray-400 leading-relaxed whitespace-pre-line">{generatedRecipe.instructions}</p>
                                 </div>
                             </div>
                         )}
+                    </div>
+                );
+            case 'about':
+                return (
+                    <div className="p-4 md:p-6">
+                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Sobre o Projeto</h2>
+                        <div className="bg-white p-4 rounded-xl shadow-sm space-y-4">
+                            <p className="text-brand-primary">
+                                O "Cada Grão Conta" é um projeto de código aberto que visa combater o desperdício de alimentos, fornecendo receitas criativas para aproveitar ao máximo cada ingrediente.
+                            </p>
+                            <p className="text-brand-primary">
+                                Nossa missão é inspirar uma cozinha mais consciente e sustentável, transformando sobras em refeições deliciosas e nutritivas.
+                            </p>
+                        </div>
                     </div>
                 );
             default:
@@ -443,7 +454,7 @@ export default function App() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4 font-inter">
+        <div className={`flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 font-inter ${isDarkMode ? 'dark' : ''}`}>
             <div className={`relative flex flex-col bg-brand-bg shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${viewMode === 'mobile' ? 'w-full max-w-sm h-[90vh]' : 'w-full max-w-5xl min-h-[85vh]'}`}>
                 {/* Header */}
                  <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200 w-full flex-shrink-0">
@@ -472,9 +483,9 @@ export default function App() {
                     <div className="flex items-center space-x-2 ml-auto">
                         { selectedRecipe && (
                              <>
-                                <button onClick={() => toggleFavorite(selectedRecipe)} aria-label={favoriteRecipeIds.has(selectedRecipe.id) ? "Remover dos favoritos" : "Adicionar aos favoritos"} className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                {/* <button onClick={() => toggleFavorite(selectedRecipe)} aria-label={favoriteRecipeIds.has(selectedRecipe.id) ? "Remover dos favoritos" : "Adicionar aos favoritos"} className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
                                     <Heart className={`w-6 h-6 transition-all ${favoriteRecipeIds.has(selectedRecipe.id) ? 'text-red-500 fill-current' : 'text-brand-primary'}`} />
-                                </button>
+                                </button> */}
                                 <button onClick={() => handleExportPdf(selectedRecipe)} aria-label="Exportar receita para PDF" className="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
                                     <Download className="w-6 h-6 text-brand-primary" />
                                 </button>
@@ -485,6 +496,9 @@ export default function App() {
                         </button>
                         <button onClick={() => setViewMode('desktop')} aria-label="Visualização desktop" className={`p-2 rounded-full ${viewMode === 'desktop' ? 'bg-amber-100 text-amber-600' : 'text-gray-400 hover:bg-gray-100'} focus:outline-none focus:ring-2 focus:ring-amber-500`}>
                             <Monitor className="w-5 h-5"/>
+                        </button>
+                        <button onClick={() => setIsDarkMode(!isDarkMode)} aria-label="Alternar modo escuro" className={`p-2 rounded-full ${isDarkMode ? 'bg-amber-100 text-amber-600' : 'text-gray-400 hover:bg-gray-100'} focus:outline-none focus:ring-2 focus:ring-amber-500`}>
+                            {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                         </button>
                     </div>
                  </header>
@@ -499,8 +513,8 @@ export default function App() {
                     <nav className="flex justify-around">
                         <NavItem icon={<Home />} label="Início" isActive={activeTab === 'home'} onClick={() => handleNavigation('home')} />
                         <NavItem icon={<Lightbulb />} label="Dicas" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
-                        <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
+                        <NavItem icon={<Info />} label="Sobre" isActive={activeTab === 'about'} onClick={() => handleNavigation('about')} />
                         <NavItem icon={<Sparkles />} label="Gerar" isActive={activeTab === 'generate'} onClick={() => handleNavigation('generate')} />
                         <a href="https://forms.gle/your-google-form-link-here" target="_blank" rel="noopener noreferrer" aria-label="Contribuir com uma receita, abre em nova aba" className="flex flex-col items-center justify-center w-full pt-2 pb-1 text-brand-secondary hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
                            <IconWrapper><Share2 /></IconWrapper>
