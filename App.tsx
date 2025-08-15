@@ -186,35 +186,40 @@ export default function App() {
     
     const toggleFavorite = useCallback(async (recipe: Recipe) => {
         if (!isFirebaseReady) {
-            console.log("Firebase not ready. Cannot modify favorites.");
+            console.warn("Firebase not ready. Cannot modify favorites yet.");
             return;
         }
 
         const isFavorited = favoriteRecipeIds.has(recipe.id);
-
-        // Optimistic UI update
         const newFavorites = isFavorited
             ? favoriteRecipes.filter(r => r.id !== recipe.id)
             : [...favoriteRecipes, recipe];
+
+        // Update state immediately for a responsive UI
         setFavoriteRecipes(newFavorites);
 
         try {
             if (user?.uid) {
+                // User is signed in, use Firestore
                 if (isFavorited) {
                     await firebaseService.removeFavoriteRecipe(user.uid, recipe.id);
                 } else {
                     await firebaseService.addFavoriteRecipe(user.uid, recipe);
                 }
             } else {
-                // If no user, force local storage operation
-                throw new Error("No user, using local storage fallback.");
+                // User is not signed in, use Local Storage
+                console.log("User not signed in, saving favorites to Local Storage.");
+                localStorage.setItem('favoriteRecipes', JSON.stringify(newFavorites));
             }
         } catch (error) {
-            console.error("Favorite operation failed, UI reverted:", error);
-            // Revert UI on failure
+            console.error("Favorite operation failed, reverting UI:", error);
+            // If any operation fails, revert the state to the previous one
             setFavoriteRecipes(favoriteRecipes);
+            // Also revert local storage if that was the intended path
+            if (!user?.uid) {
+                localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+            }
         }
-
     }, [isFirebaseReady, favoriteRecipeIds, favoriteRecipes, user]);
 
     const handleExportPdf = (recipe: Recipe) => {
