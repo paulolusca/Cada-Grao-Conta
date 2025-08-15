@@ -1,7 +1,7 @@
-import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/genai";
+import { GoogleGenAI, HarmCategory, HarmBlockThreshold } from "@google/genai";
 import { GeneratedRecipe } from "../types";
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string;
+const API_KEY = (import.meta.env.VITE_GEMINI_API_KEY as string)?.trim();
 
 // Moved instantiation inside the function to avoid app crash on start
 // if the API key is a placeholder.
@@ -38,7 +38,7 @@ export async function generateRecipeWithAI(ingredients: string): Promise<Generat
         throw new Error("A chave da API do Gemini não está configurada. Por favor, adicione-a ao arquivo .env.local.");
     }
 
-    const genAI = new GoogleGenerativeAI(API_KEY);
+    const genAI = new GoogleGenAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro", generationConfig, safetySettings });
 
     const prompt = `
