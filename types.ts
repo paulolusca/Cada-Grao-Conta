@@ -16,7 +16,7 @@ export interface Category {
   recipes: Recipe[];
 }
 
-export type Tab = 'home' | 'tips' | 'videos' | 'favorites' | 'generate';
+export type Tab = 'home' | 'tips' | 'videos' | 'favorites';
 
 export type ViewMode = 'mobile' | 'desktop';
 
@@ -24,11 +24,4 @@ export interface EducationalVideo {
     id: string;
     title: string;
     description: string;
-}
-
-// Type for the AI-generated recipe structure
-export interface GeneratedRecipe {
-    name: string;
-    ingredients: string[];
-    instructions: string;
 }
