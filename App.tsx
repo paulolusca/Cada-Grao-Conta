@@ -7,7 +7,6 @@ import {
     Lightbulb, 
     Youtube, 
     Heart, 
-    Sparkles, 
     BookHeart, 
     Share2, 
     Search, 
@@ -19,10 +18,9 @@ import {
     LoaderCircle
 } from 'lucide-react';
 
-import { Recipe, Category, Tab, ViewMode, GeneratedRecipe } from './types';
+import { Recipe, Category, Tab, ViewMode } from './types';
 import { categoriesData, allRecipes, repurposingTips, educationalVideos } from './constants';
 import * as firebaseService from './services/firebaseService';
-import { generateRecipeWithAI } from './services/geminiService';
 
 // Declare global variable for html2pdf library
 declare const html2pdf: any;
@@ -97,12 +95,6 @@ export default function App() {
     const [user, setUser] = useState<User | null>(null);
     const [favoriteRecipes, setFavoriteRecipes] = useState<Recipe[]>([]);
     const [isFirebaseReady, setIsFirebaseReady] = useState(false);
-
-    // AI Generation State
-    const [generatedRecipe, setGeneratedRecipe] = useState<GeneratedRecipe | null>(null);
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [generationError, setGenerationError] = useState<string | null>(null);
-    const [aiIngredients, setAiIngredients] = useState('');
 
     // ======== FIREBASE & AUTH EFFECT ======== //
     useEffect(() => {
@@ -228,24 +220,6 @@ export default function App() {
                 jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
             html2pdf().set(opt).from(element).save();
-        }
-    };
-
-    const handleGenerateRecipe = async () => {
-        if (!aiIngredients.trim()) {
-            setGenerationError("Por favor, insira alguns ingredientes.");
-            return;
-        }
-        setIsGenerating(true);
-        setGenerationError(null);
-        setGeneratedRecipe(null);
-        try {
-            const result = await generateRecipeWithAI(aiIngredients);
-            setGeneratedRecipe(result);
-        } catch (error) {
-            setGenerationError(error instanceof Error ? error.message : "Ocorreu um erro desconhecido.");
-        } finally {
-            setIsGenerating(false);
         }
     };
 
@@ -390,52 +364,6 @@ export default function App() {
                         )}
                     </div>
                 );
-             case 'generate':
-                return (
-                     <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Gerar Receita ✨</h2>
-                        <div className="bg-white p-4 rounded-xl shadow-sm">
-                            <label htmlFor="ingredients-input" className="block text-sm font-medium text-brand-primary mb-2">Quais ingredientes você tem aí?</label>
-                            <textarea
-                                id="ingredients-input"
-                                value={aiIngredients}
-                                onChange={(e) => setAiIngredients(e.target.value)}
-                                placeholder="Ex: banana madura, pão amanhecido, ovos, leite"
-                                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition"
-                                rows={4}
-                                aria-label="Ingredientes para gerar receita"
-                            />
-                            <button
-                                onClick={handleGenerateRecipe}
-                                disabled={isGenerating}
-                                className="mt-4 w-full bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg flex justify-center items-center transition-colors hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary disabled:bg-gray-400"
-                                aria-label="Gerar receita com inteligência artificial"
-                            >
-                                {isGenerating ? <LoaderCircle className="w-5 h-5 animate-spin"/> : 'Gerar Receita'}
-                            </button>
-                        </div>
-
-                        {generationError && <p className="mt-4 text-red-600 bg-red-100 p-3 rounded-lg">{generationError}</p>}
-                        
-                        {isGenerating && !generatedRecipe && <Spinner />}
-
-                        {generatedRecipe && (
-                            <div className="mt-6 bg-white p-4 rounded-xl shadow-sm animate-fade-in">
-                                <h3 className="text-2xl font-bold text-brand-primary mb-2">{generatedRecipe.name}</h3>
-                                <div className="mb-4">
-                                    <h4 className="text-lg font-semibold text-brand-primary mb-2">Ingredientes</h4>
-                                    <ul className="list-disc list-inside text-brand-primary space-y-1">
-                                        {generatedRecipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
-                                    </ul>
-                                </div>
-                                 <div>
-                                    <h4 className="text-lg font-semibold text-brand-primary mb-2">Modo de Preparo</h4>
-                                    <p className="text-brand-primary leading-relaxed whitespace-pre-line">{generatedRecipe.instructions}</p>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                );
             default:
                 return null;
         }
@@ -501,7 +429,6 @@ export default function App() {
                         <NavItem icon={<Lightbulb />} label="Dicas" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
                         <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
-                        <NavItem icon={<Sparkles />} label="Gerar" isActive={activeTab === 'generate'} onClick={() => handleNavigation('generate')} />
                         <a href="https://forms.gle/your-google-form-link-here" target="_blank" rel="noopener noreferrer" aria-label="Contribuir com uma receita, abre em nova aba" className="flex flex-col items-center justify-center w-full pt-2 pb-1 text-brand-secondary hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
                            <IconWrapper><Share2 /></IconWrapper>
                            <span className="text-xs mt-1">Contribuir</span>
