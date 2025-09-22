@@ -198,8 +198,8 @@ export default function App() {
                     await firebaseService.addFavoriteRecipe(user.uid, recipe);
                 }
             } else {
-                // If no user, force local storage operation
-                throw new Error("No user, using local storage fallback.");
+                // Fallback to localStorage if user is not available
+                localStorage.setItem('favoriteRecipes', JSON.stringify(newFavorites));
             }
         } catch (error) {
             console.error("Favorite operation failed, UI reverted:", error);
