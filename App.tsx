@@ -15,7 +15,8 @@ import {
     ArrowLeft, 
     Trash2, 
     Download,
-    LoaderCircle
+    LoaderCircle,
+    Info
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode } from './types';
@@ -364,6 +365,39 @@ export default function App() {
                         )}
                     </div>
                 );
+            case 'about':
+                return (
+                    <div className="p-4 md:p-6">
+                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Sobre o Projeto</h2>
+                        <div className="space-y-4 text-brand-primary">
+                            <p>Este é o projeto 'Cada Grão Conta', uma iniciativa para combater o desperdício de alimentos.</p>
+
+                            <h3 className="text-xl font-semibold text-brand-primary pt-4">Nossa Missão</h3>
+                            <p>Nossa missão é fornecer receitas criativas e dicas úteis para que você possa aproveitar ao máximo cada ingrediente em sua cozinha, reduzindo o desperdício e promovendo um estilo de vida mais sustentável.</p>
+
+                            {/* Placeholder for an image */}
+                            <div className="py-4">
+                                <img src="https://placehold.co/600x300/F5E7D6/5C4B3A?text=Nossa+Equipe" alt="Nossa equipe" className="rounded-lg shadow-md w-full object-cover" />
+                            </div>
+
+                            <h3 className="text-xl font-semibold text-brand-primary pt-4">Como Foi Desenvolvido</h3>
+                            <p>O 'Cada Grão Conta' foi desenvolvido com as mais modernas tecnologias de desenvolvimento de software, pensando na melhor experiência para o usuário.</p>
+
+                            {/* Placeholder for a video */}
+                            <div className="aspect-w-16 aspect-h-9 my-4">
+                                <iframe
+                                    className="w-full h-full rounded-lg"
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    title="Vídeo sobre o desenvolvimento"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                            <p>Utilizamos React com TypeScript e Vite para um desenvolvimento rápido e robusto, e Firebase para gerenciar dados em tempo real, como as receitas favoritas dos usuários.</p>
+                        </div>
+                    </div>
+                );
             default:
                 return null;
         }
@@ -429,6 +463,7 @@ export default function App() {
                         <NavItem icon={<Lightbulb />} label="Dicas" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
                         <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
+                        <NavItem icon={<Info />} label="Sobre" isActive={activeTab === 'about'} onClick={() => handleNavigation('about')} />
                         <a href="https://forms.gle/your-google-form-link-here" target="_blank" rel="noopener noreferrer" aria-label="Contribuir com uma receita, abre em nova aba" className="flex flex-col items-center justify-center w-full pt-2 pb-1 text-brand-secondary hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
                            <IconWrapper><Share2 /></IconWrapper>
                            <span className="text-xs mt-1">Contribuir</span>
