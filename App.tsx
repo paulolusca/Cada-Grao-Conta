@@ -426,7 +426,7 @@ export default function App() {
                 <footer className="flex-shrink-0 border-t border-gray-200 bg-white p-1">
                     <nav className="flex justify-around">
                         <NavItem icon={<Home />} label="Início" isActive={activeTab === 'home'} onClick={() => handleNavigation('home')} />
-                        <NavItem icon={<Lightbulb />} label="Dicas" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
+                        <NavItem icon={<Lightbulb />} label="Sobre" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
                         <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
                         <a href="https://forms.gle/your-google-form-link-here" target="_blank" rel="noopener noreferrer" aria-label="Contribuir com uma receita, abre em nova aba" className="flex flex-col items-center justify-center w-full pt-2 pb-1 text-brand-secondary hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
