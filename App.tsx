@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode } from './types';
-import { categoriesData, allRecipes } from './constants';
+import { categoriesData, allRecipes, educationalVideos } from './constants';
 import * as firebaseService from './services/firebaseService';
 import { getResizedImgurUrl } from './src/utils';
 import About from './src/About';
