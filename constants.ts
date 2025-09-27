@@ -109,8 +109,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   image: 'https://placehold.co/300x200?text=Bolinho+Arroz',
   source: 'Receita da família de Maria Fernanda Queiroz de Almeida',
   extra: 'História: "Era uma receita da minha Vovó Tereza e da minha Mãe Eliana."'
-},
-      }
+}
     ]
   },
   {
@@ -173,8 +172,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   category: 'Cascas, Talos e Folhas',
   image: 'https://placehold.co/300x200?text=Suco+Casca+Abacaxi',
   source: 'Receita da família da Millena Silva de Lima'
-},
-      }
+}
     ]
   },
   {
