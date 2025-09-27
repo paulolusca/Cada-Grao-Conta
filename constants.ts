@@ -25,6 +25,16 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
         source: 'Receita da família da Kethelyn Vale Pereira',
         extra: 'História: "Minha tia Cecília sempre fazia para a gente comer"'
       },
+        {
+  id: 'bolo-casca-banana',
+  name: 'Bolo de Casca de Banana',
+  ingredients: ['Cascas de banana', 'Açúcar', 'Ovos', 'Farinha de trigo', 'Fermento', 'Óleo'],
+  instructions: 'Bata as cascas com os ovos e óleo no liquidificador. Misture com os demais ingredientes e leve ao forno até dourar.',
+  category: 'Cascas, Talos e Folhas',
+  image: 'https://i.imgur.com/uxWSBHW.jpeg',
+  source: 'Receita da família do Piettro Miguell Oliveira Cruz de Lima',
+  extra: 'Dica: “Façam essa receita! Ela é muito saborosa!”'
+},
       {
         id: 'bolo-cenoura',
   name: 'Bolo de Cenoura',
@@ -44,6 +54,15 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   source: 'Receita da família de Ana Clara Freitas Ramos',
   extra: 'Dica: "A dica é colocar na geladeira!"'
 },
+        {
+  id: 'suco-casca-abacaxi',
+  name: 'Suco de Casca de Abacaxi',
+  ingredients: ['Cascas de abacaxi bem lavadas', 'Água', 'Açúcar ou mel a gosto'],
+  instructions: 'Bata as cascas no liquidificador com água. Coe, adoce a gosto e sirva gelado.',
+  category: 'Cascas, Talos e Folhas',
+  image: '[https://i.imgur.com/DWxNdAK.jpeg)',
+  source: 'Receita da família da Millena Silva de Lima'
+},
 {
   id: 'hamburguer-empanado',
   name: 'Hambúrguer Empanado',
@@ -52,6 +71,36 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   category: 'Receitas de Família',
   image: 'https://i.imgur.com/42vQ5Zb.jpeg',
   source: 'Receita da família da Emilly Vitória dos Santos Bacagine'
+},
+        {
+  id: 'bolinho-arroz',
+  name: 'Bolinho de Arroz',
+  ingredients: ['Arroz cozido', 'Ovos', 'Farinha de trigo', 'Queijo ralado', 'Temperos'],
+  instructions: 'Misture o arroz com os demais ingredientes até formar massa. Modele os bolinhos e frite até dourar.',
+  category: 'Receitas de Família',
+  image: 'https://i.imgur.com/pHaPeeo.jpeg',
+  source: 'Receita da família de Maria Fernanda Queiroz de Almeida',
+  extra: 'História: "Era uma receita da minha Vovó Tereza e da minha Mãe Eliana."'
+      },
+          {
+  id: 'pudim-pao-amanhecido',
+  name: 'Pudim de Pão Amanhecido',
+  ingredients: ['Pães amanhecidos', 'Leite', 'Açúcar', 'Ovos', 'Canela'],
+  instructions: 'Bata todos os ingredientes no liquidificador, coloque em forma caramelizada e asse em banho-maria.',
+  category: 'Sobras Criativas',
+  image: 'https://i.imgur.com/V4mjYFu.jpeg',
+  source: 'Receita da família de Vítor Moura Viana',
+  extra: 'Dica: "Espete um palito de dente no pudim, e se sair limpo, está pronto. Desenforme em um recipiente, deixe gelar e bom apetite!"'
+      },
+      {
+       id: 'pudim-pao',
+  name: 'Pudim de Pão',
+  ingredients: ['Pães amanhecidos', 'Leite', 'Ovos', 'Açúcar', 'Baunilha'],
+  instructions: 'Misture o pão umedecido com os demais ingredientes, despeje em forma caramelizada e asse em banho-maria.',
+  category: 'Sobras Criativas',
+  image: 'https://static.itdg.com.br/images/360-240/ba68e781f9b13dab4569483686f2ac41/352648-original.jpg',
+  source: 'Receita da família de Ana Julia Batista da Silva',
+  extra: 'História: "Minha bisavó fazia no café da manhã para o meu pai."'
 },
 {
   id: 'sopa-legumes-nordeste',
@@ -161,7 +210,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Folhas de beterraba', 'Arroz cozido', 'Carne moída ou soja', 'Temperos a gosto'],
   instructions: 'Branqueie as folhas, recheie com arroz e carne, enrole como charuto e cozinhe em molho leve.',
   category: 'Cascas, Talos e Folhas',
-  image: '[blob:https://labs.google/316222d2-ce30-40a2-ae46-67832b75e785)',
+  image: '[https://labs.google/316222d2-ce30-40a2-ae46-67832b75e785)',
   source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
 },
 {
@@ -187,7 +236,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
         ingredients: ['Frutas maduras (morango, manga, etc.)', 'Açúcar', 'Limão'],
         instructions: 'Cozinhe as frutas picadas com açúcar e suco de limão até atingir o ponto de geleia.',
         category: 'Frutas Maduras',
-        image: '[blob:https://imgur.com/93b71343-f4cb-4188-b74f-3d00e958bd4d)'
+        image: '[https://imgur.com/93b71343-f4cb-4188-b74f-3d00e958bd4d)'
       },
       {
         id: 'sorvete-banana',
