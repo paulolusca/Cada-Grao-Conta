@@ -6,6 +6,8 @@ export interface Recipe {
   instructions: string;
   category: string;
   image: string;
+  source?: string;
+  extra?: string;
 }
 
 export interface Category {

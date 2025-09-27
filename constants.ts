@@ -113,7 +113,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
     ]
   },
   {
-    id: 'Cascas-talos-folhas',
+    id: 'cascas-talos-folhas',
     title: 'Cascas, Talos e Folhas',
     description: 'Aqui mostramos que nada precisa ir para o lixo! Receitas que aproveitam cascas, talos e folhas para transformar em pratos saborosos e saudáveis.',
     image: '[https://placehold.co/400x250/C8A4B8/5C3A4B?text=Paes+Amanhecidos](https://placehold.co/400x250/C8A4B8/5C3A4B?text=Paes+Amanhecidos)',

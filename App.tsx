@@ -263,6 +263,23 @@ export default function App() {
                         <h3 className="text-xl font-semibold text-brand-primary mb-2">Modo de Preparo</h3>
                         <p className="text-brand-primary leading-relaxed whitespace-pre-line">{selectedRecipe.instructions}</p>
                     </div>
+
+                    {(selectedRecipe.source || selectedRecipe.extra) && (
+                        <div className="mt-6 border-t border-gray-200 pt-4">
+                            {selectedRecipe.source && (
+                                <div className="mb-4">
+                                    <h4 className="text-lg font-semibold text-brand-primary mb-1">Fonte da Receita</h4>
+                                    <p className="text-brand-primary italic">{selectedRecipe.source}</p>
+                                </div>
+                            )}
+                            {selectedRecipe.extra && (
+                                <div>
+                                    <h4 className="text-lg font-semibold text-brand-primary mb-1">Dica ou História</h4>
+                                    <p className="text-brand-primary italic">{selectedRecipe.extra}</p>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             );
         }
