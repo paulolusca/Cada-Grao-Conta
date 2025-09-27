@@ -320,7 +320,7 @@ export default function App() {
             case 'videos':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Vídeos Educativos</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Vídeos</h2>
                         <div className="space-y-6">
                             {educationalVideos.map(video => (
                                 <div key={video.id} className="bg-white p-4 rounded-xl shadow-sm overflow-hidden">
