@@ -303,16 +303,30 @@ export default function App() {
         switch (activeTab) {
             case 'home':
                 return (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 p-4 md:p-6">
-                        {categoriesData.map(cat => (
-                            <div key={cat.id} onClick={() => handleSelectCategory(cat)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleSelectCategory(cat)} aria-label={`Ver categoria ${cat.title}`} className="relative rounded-xl overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                <img src={cat.image} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
-                                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-                                    <h3 className="text-white font-bold text-xl">{cat.title}</h3>
-                                    <p className="hidden md:block text-gray-200 text-sm">{cat.description}</p>
+                    <div className="p-4 md:p-6">
+                        {/* Search bar for mobile */}
+                        <div className="md:hidden mb-4 relative">
+                            <Search className="w-5 h-5 text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
+                            <input
+                                type="text"
+                                placeholder="Buscar por nome ou ingrediente..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                className="w-full bg-white border border-gray-300 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-amber-500 text-brand-primary"
+                                aria-label="Buscar por nome ou ingrediente da receita"
+                            />
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            {categoriesData.map(cat => (
+                                <div key={cat.id} onClick={() => handleSelectCategory(cat)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleSelectCategory(cat)} aria-label={`Ver categoria ${cat.title}`} className="relative rounded-xl overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <img src={cat.image} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
+                                        <h3 className="text-white font-bold text-xl">{cat.title}</h3>
+                                        <p className="hidden md:block text-gray-200 text-sm">{cat.description}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 );
             case 'about':
@@ -378,8 +392,8 @@ export default function App() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4 font-inter">
-            <div className={`relative flex flex-col bg-brand-bg shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${viewMode === 'mobile' ? 'w-full max-w-sm h-[90vh]' : 'w-full max-w-5xl min-h-[85vh]'}`}>
+        <div className="flex flex-col items-center justify-center h-screen bg-gray-800 p-4 font-inter">
+            <div className={`relative flex flex-col bg-brand-bg shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${viewMode === 'mobile' ? 'w-full max-w-sm h-full' : 'w-full max-w-5xl h-[95vh]'}`}>
                 {/* Header */}
                  <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200 w-full flex-shrink-0">
                     { (selectedCategory || selectedRecipe) && (
