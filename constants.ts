@@ -63,7 +63,6 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   source: 'Receita da família do David Menezes da Silva',
   extra: 'História: “Minha avó materna fazia para a minha mãe quando ela era criança”'
 }
-      }
     ]
   },
   {
