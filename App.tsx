@@ -4,6 +4,7 @@ import type { User } from 'firebase/auth';
 import type { Unsubscribe } from 'firebase/firestore';
 import { 
     Home, 
+    Info,
     Lightbulb, 
     Youtube, 
     Heart, 
@@ -21,6 +22,7 @@ import {
 import { Recipe, Category, Tab, ViewMode } from './types';
 import { categoriesData, allRecipes, repurposingTips, educationalVideos } from './constants';
 import * as firebaseService from './services/firebaseService';
+import About from './src/About';
 
 // Declare global variable for html2pdf library
 declare const html2pdf: any;
@@ -313,20 +315,8 @@ export default function App() {
                         ))}
                     </div>
                 );
-            case 'tips':
-                return (
-                    <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Dicas de Reaproveitamento</h2>
-                        <ul className="space-y-4">
-                            {repurposingTips.map((tip, index) => (
-                                <li key={index} className="flex items-start bg-white p-4 rounded-xl shadow-sm">
-                                    <Lightbulb className="w-6 h-6 text-amber-500 mr-4 mt-1 flex-shrink-0" />
-                                    <p className="text-brand-primary">{tip}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                );
+            case 'about':
+                return <About />;
             case 'videos':
                 return (
                      <div className="p-4 md:p-6">
@@ -443,7 +433,7 @@ export default function App() {
                 <footer className="flex-shrink-0 border-t border-gray-200 bg-white p-1">
                     <nav className="flex justify-around">
                         <NavItem icon={<Home />} label="Início" isActive={activeTab === 'home'} onClick={() => handleNavigation('home')} />
-                        <NavItem icon={<Lightbulb />} label="Sobre" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
+                        <NavItem icon={<Info />} label="Sobre" isActive={activeTab === 'about'} onClick={() => handleNavigation('about')} />
                         <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
                         <a href="https://forms.gle/your-google-form-link-here" target="_blank" rel="noopener noreferrer" aria-label="Contribuir com uma receita, abre em nova aba" className="flex flex-col items-center justify-center w-full pt-2 pb-1 text-brand-secondary hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
