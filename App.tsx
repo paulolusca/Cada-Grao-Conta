@@ -227,11 +227,27 @@ export default function App() {
 
 
     // ======== RENDER LOGIC ======== //
+
+    const mobileSearchBar = (
+        <div className="md:hidden mb-4 relative">
+            <Search className="w-5 h-5 text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
+            <input
+                type="text"
+                placeholder="Buscar por nome ou ingrediente..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-white border border-gray-300 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-amber-500 text-brand-primary"
+                aria-label="Buscar por nome ou ingrediente da receita"
+            />
+        </div>
+    );
+
     const renderContent = () => {
         // Search results view takes priority
         if (searchQuery) {
             return (
                 <div className="p-4 md:p-6">
+                    {mobileSearchBar}
                     <h2 className="text-2xl font-bold text-brand-primary mb-4">Resultados da Busca</h2>
                     {filteredRecipes.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -304,18 +320,7 @@ export default function App() {
             case 'home':
                 return (
                     <div className="p-4 md:p-6">
-                        {/* Search bar for mobile */}
-                        <div className="md:hidden mb-4 relative">
-                            <Search className="w-5 h-5 text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
-                            <input
-                                type="text"
-                                placeholder="Buscar por nome ou ingrediente..."
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full bg-white border border-gray-300 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-amber-500 text-brand-primary"
-                                aria-label="Buscar por nome ou ingrediente da receita"
-                            />
-                        </div>
+                        {mobileSearchBar}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             {categoriesData.map(cat => (
                                 <div key={cat.id} onClick={() => handleSelectCategory(cat)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleSelectCategory(cat)} aria-label={`Ver categoria ${cat.title}`} className="relative rounded-xl overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-amber-500">
