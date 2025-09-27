@@ -398,7 +398,7 @@ export default function App() {
                         </button>
                     )}
                     <div className={`flex-grow flex ${selectedCategory || selectedRecipe ? 'justify-end' : 'justify-center md:justify-start'}`}>
-                       <img src="https://placehold.co/180x50/5C4B3A/F5E7D6?text=Cada+Grao+Conta" alt="Cada Grão Conta Logo" className="h-8 md:h-10" />
+                       <img src="https://imgur.com/381beb58-32a5-4cda-96a6-92c1f3cd04da" alt="Cada Grão Conta Logo" className="h-8 md:h-10" />
                     </div>
                     { !selectedRecipe && (
                          <div className="hidden md:flex items-center space-x-2 flex-grow max-w-xs ml-4">
