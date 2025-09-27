@@ -13,7 +13,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
     id: 'receitas-familias',
     title: 'Receitas de Família',
     description: 'Receitas que vieram das casas dos nossos estudantes, cheias de afeto, memórias e sabores especiais. Aqui a escola e a família cozinham juntas.',
-    image: '[https://placehold.co/400x250/C8B8A4/5C4B3A?text=Cascas+e+Talos](https://placehold.co/400x250/C8B8A4/5C4B3A?text=Cascas+e+Talos)',
+    image: 'https://i.imgur.com/i5Avlm3.jpeg',
     recipes: [
       {
         id: 'pudim-mais-gostoso',
@@ -21,7 +21,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
         ingredients: ['Leite condensado', 'Leite', 'Ovos', 'Açúcar para caramelizar'],
         instructions: 'Bata tudo no liquidificador, coloque em forma caramelizada e asse em banho-maria até firmar.',
         category: 'Receitas de Família',
-        image: 'https://placehold.co/300x200?text=Pudim+Mais+Gostoso',
+        image: 'https://www.mococa.com.br/wp-content/uploads/2023/08/img-pudim.jpg',
         source: 'Receita da família da Kethelyn Vale Pereira',
         extra: 'História: "Minha tia Cecília sempre fazia para a gente comer"'
       },
@@ -31,7 +31,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Cenouras', 'Ovos', 'Óleo', 'Açúcar', 'Farinha de trigo', 'Fermento'],
   instructions: 'Bata cenoura, ovos e óleo no liquidificador. Misture com os secos, asse e cubra com calda de chocolate.',
   category: 'Receitas de Família',
-  image: 'https://placehold.co/300x200?text=Bolo+Cenoura',
+  image: 'https://i.imgur.com/9tRQE9H.jpeg',
   source: 'Receita da família de Lucas Gabriel Dias Cerqueira'
           },
 {
@@ -40,7 +40,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Frutas variadas', 'Suco de laranja ou limão', 'Açúcar ou mel a gosto'],
   instructions: 'Corte as frutas em pedaços, misture em uma tigela, regue com suco e adoce a gosto.',
   category: 'Receitas de Família',
-  image: 'https://placehold.co/300x200?text=Salada+Frutas',
+  image: 'https://i.imgur.com/X2whWVA.jpeg',
   source: 'Receita da família de Ana Clara Freitas Ramos',
   extra: 'Dica: "A dica é colocar na geladeira!"'
 },
@@ -50,7 +50,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Carne moída temperada ou hambúrguer pronto', 'Farinha de trigo', 'Ovo batido', 'Farinha de rosca', 'Óleo'],
   instructions: 'Passe os hambúrgueres na farinha, depois no ovo, depois na farinha de rosca. Frite até dourar.',
   category: 'Receitas de Família',
-  image: 'https://placehold.co/300x200?text=Hamburguer+Empanado',
+  image: 'https://i.imgur.com/42vQ5Zb.jpeg',
   source: 'Receita da família da Emilly Vitória dos Santos Bacagine'
 },
 {
@@ -59,7 +59,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Legumes variados', 'Macarrão ou arroz', 'Caldo', 'Temperos a gosto'],
   instructions: 'Cozinhe os legumes no caldo até ficarem macios. Acrescente macarrão ou arroz, tempere e sirva quente.',
   category: 'Receitas de Família',
-  image: 'https://placehold.co/300x200?text=Sopa+Nordeste',
+  image: 'https://i.imgur.com/0gIOjJX.jpeg',
   source: 'Receita da família do David Menezes da Silva',
   extra: 'História: “Minha avó materna fazia para a minha mãe quando ela era criança”'
 }
@@ -69,7 +69,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
     id: 'sobras-criativas',
     title: 'Sobras Criativas',
     description: 'Com criatividade, até as sobras viram novas delícias. Nesta categoria você encontra ideias para reaproveitar arroz, pão e outros alimentos do dia a dia',
-    image: '[https://placehold.co/400x250/A4C8B8/3A5C4B?text=Sobras+Criativas](https://placehold.co/400x250/A4C8B8/3A5C4B?text=Sobras+Criativas)',
+    image: '[https://i.imgur.com/ToxOL8a.jpeg',
     recipes: [
       {
   id: 'pudim-pao-amanhecido',
@@ -77,7 +77,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Pães amanhecidos', 'Leite', 'Açúcar', 'Ovos', 'Canela'],
   instructions: 'Bata todos os ingredientes no liquidificador, coloque em forma caramelizada e asse em banho-maria.',
   category: 'Sobras Criativas',
-  image: 'https://placehold.co/300x200?text=Pudim+Pao+Amanhecido',
+  image: 'https://i.imgur.com/V4mjYFu.jpeg',
   source: 'Receita da família de Vítor Moura Viana',
   extra: 'Dica: "Espete um palito de dente no pudim, e se sair limpo, está pronto. Desenforme em um recipiente, deixe gelar e bom apetite!"'
       },
@@ -87,7 +87,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Pães amanhecidos', 'Leite', 'Ovos', 'Açúcar', 'Baunilha'],
   instructions: 'Misture o pão umedecido com os demais ingredientes, despeje em forma caramelizada e asse em banho-maria.',
   category: 'Sobras Criativas',
-  image: 'https://placehold.co/300x200?text=Pudim+Pao',
+  image: 'https://static.itdg.com.br/images/360-240/ba68e781f9b13dab4569483686f2ac41/352648-original.jpg',
   source: 'Receita da família de Ana Julia Batista da Silva',
   extra: 'História: "Minha bisavó fazia no café da manhã para o meu pai."'
 },
@@ -97,7 +97,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Arroz cozido', 'Molho de tomate', 'Queijo', 'Presunto ou legumes', 'Temperos'],
   instructions: 'Monte em camadas o arroz, o molho e os recheios. Finalize com queijo e leve ao forno para gratinar.',
   category: 'Sobras Criativas',
-  image: 'https://placehold.co/300x200?text=Lasanha+Arroz',
+  image: 'https://anamariareceitas.com.br/wp-content/uploads/2022/10/Lasanha-de-arroz.jpg',
   source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
 },
 {
@@ -106,7 +106,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Arroz cozido', 'Ovos', 'Farinha de trigo', 'Queijo ralado', 'Temperos'],
   instructions: 'Misture o arroz com os demais ingredientes até formar massa. Modele os bolinhos e frite até dourar.',
   category: 'Receitas de Família',
-  image: 'https://placehold.co/300x200?text=Bolinho+Arroz',
+  image: 'https://i.imgur.com/pHaPeeo.jpeg',
   source: 'Receita da família de Maria Fernanda Queiroz de Almeida',
   extra: 'História: "Era uma receita da minha Vovó Tereza e da minha Mãe Eliana."'
 }
@@ -116,7 +116,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
     id: 'cascas-talos-folhas',
     title: 'Cascas, Talos e Folhas',
     description: 'Aqui mostramos que nada precisa ir para o lixo! Receitas que aproveitam cascas, talos e folhas para transformar em pratos saborosos e saudáveis.',
-    image: '[https://placehold.co/400x250/C8A4B8/5C3A4B?text=Paes+Amanhecidos](https://placehold.co/400x250/C8A4B8/5C3A4B?text=Paes+Amanhecidos)',
+    image: '[https://i.imgur.com/P8dlMwe.jpeg)',
     recipes: [
       {
   id: 'bolo-casca-banana',
@@ -124,7 +124,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Cascas de banana', 'Açúcar', 'Ovos', 'Farinha de trigo', 'Fermento', 'Óleo'],
   instructions: 'Bata as cascas com os ovos e óleo no liquidificador. Misture com os demais ingredientes e leve ao forno até dourar.',
   category: 'Cascas, Talos e Folhas',
-  image: 'https://placehold.co/300x200?text=Bolo+Casca+Banana',
+  image: 'https://i.imgur.com/uxWSBHW.jpeg',
   source: 'Receita da família do Piettro Miguell Oliveira Cruz de Lima',
   extra: 'Dica: “Façam essa receita! Ela é muito saborosa!”'
 },
@@ -134,7 +134,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Cascas de banana', 'Farinha de trigo', 'Ovo batido', 'Farinha de rosca', 'Óleo para fritar'],
   instructions: 'Lave bem as cascas, passe na farinha, depois no ovo, empane na farinha de rosca e frite até dourar.',
   category: 'Cascas, Talos e Folhas',
-  image: 'https://placehold.co/300x200?text=Cascas+Milanesa',
+  image: '[https://i.imgur.com/yns5ANG.jpeg)',
   source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
 },
 {
@@ -143,7 +143,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Cascas de abóbora', 'Cebola', 'Tomate', 'Azeite', 'Sal'],
   instructions: 'Cozinhe rapidamente as cascas até ficarem macias. Misture com cebola e tomate picados, tempere com sal e azeite.',
   category: 'Cascas, Talos e Folhas',
-  image: 'https://placehold.co/300x200?text=Salada+Casca+Abobora',
+  image: '[https://i.imgur.com/b8TdUsh.jpeg)',
   source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
 },
 {
@@ -152,7 +152,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Folhas de couve-flor', 'Farinha de mandioca', 'Cebola', 'Alho', 'Óleo', 'Sal'],
   instructions: 'Refogue cebola e alho no óleo. Acrescente as folhas picadas, depois a farinha, mexa bem e sirva.',
   category: 'Cascas, Talos e Folhas',
-  image: 'https://placehold.co/300x200?text=Farofa+Folhas+Couveflor',
+  image: '[https://imgur.com/3e8d1edb-f19f-48bc-9251-77d2ce63ca6a)',
   source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
 },
 {
@@ -161,7 +161,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Folhas de beterraba', 'Arroz cozido', 'Carne moída ou soja', 'Temperos a gosto'],
   instructions: 'Branqueie as folhas, recheie com arroz e carne, enrole como charuto e cozinhe em molho leve.',
   category: 'Cascas, Talos e Folhas',
-  image: 'https://placehold.co/300x200?text=Charuto+Folha+Beterraba',
+  image: '[blob:https://labs.google/316222d2-ce30-40a2-ae46-67832b75e785)',
   source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
 },
 {
@@ -170,7 +170,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
   ingredients: ['Cascas de abacaxi bem lavadas', 'Água', 'Açúcar ou mel a gosto'],
   instructions: 'Bata as cascas no liquidificador com água. Coe, adoce a gosto e sirva gelado.',
   category: 'Cascas, Talos e Folhas',
-  image: 'https://placehold.co/300x200?text=Suco+Casca+Abacaxi',
+  image: '[https://i.imgur.com/DWxNdAK.jpeg)',
   source: 'Receita da família da Millena Silva de Lima'
 }
     ]
@@ -179,7 +179,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
     id: 'frutas-maduras',
     title: 'Frutas Maduras',
     description: 'Aproveite o sabor doce das frutas maduras em sucos, geleias e sobremesas, evitando o desperdício.',
-    image: '[https://placehold.co/400x250/B8A4C8/4B3A5C?text=Frutas+Maduras](https://placehold.co/400x250/B8A4C8/4B3A5C?text=Frutas+Maduras)',
+    image: '[https://i.imgur.com/d1HEIFk.jpeg)',
     recipes: [
       {
         id: 'geleia-frutas',
@@ -187,7 +187,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
         ingredients: ['Frutas maduras (morango, manga, etc.)', 'Açúcar', 'Limão'],
         instructions: 'Cozinhe as frutas picadas com açúcar e suco de limão até atingir o ponto de geleia.',
         category: 'Frutas Maduras',
-        image: '[https://placehold.co/300x200/C2B8D4/5C4B6B?text=Geleia+de+Frutas](https://placehold.co/300x200/C2B8D4/5C4B6B?text=Geleia+de+Frutas)'
+        image: '[blob:https://imgur.com/93b71343-f4cb-4188-b74f-3d00e958bd4d)'
       },
       {
         id: 'sorvete-banana',
@@ -195,7 +195,7 @@ const rawCategoriesData: (Omit<Category, 'image' | 'recipes'> & { image: string,
         ingredients: ['Banana madura congelada'],
         instructions: 'Bata as bananas congeladas no processador até obter uma consistência cremosa de sorvete.',
         category: 'Frutas Maduras',
-        image: '[https://placehold.co/300x200/C2B8D4/5C4B6B?text=Sorvete+de+Banana](https://placehold.co/300x200/C2B8D4/5C4B6B?text=Sorvete+de+Banana)'
+        image: '[https://i.imgur.com/soK0PMd.jpeg)'
       }
     ]
   }
