@@ -397,7 +397,7 @@ export default function App() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-800 p-4 font-inter">
+        <div className="flex flex-col items-center justify-center h-dvh bg-gray-800 p-4 font-inter">
             <div className={`relative flex flex-col bg-brand-bg shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${viewMode === 'mobile' ? 'w-full max-w-sm h-full' : 'w-full max-w-5xl h-[95vh]'}`}>
                 {/* Header */}
                  <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200 w-full flex-shrink-0">
