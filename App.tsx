@@ -5,7 +5,6 @@ import type { Unsubscribe } from 'firebase/firestore';
 import { 
     Home, 
     Info,
-    Lightbulb, 
     Youtube, 
     Heart, 
     BookHeart, 
@@ -20,8 +19,9 @@ import {
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode } from './types';
-import { categoriesData, allRecipes, repurposingTips, educationalVideos } from './constants';
+import { categoriesData, allRecipes } from './constants';
 import * as firebaseService from './services/firebaseService';
+import { getResizedImgurUrl } from './src/utils';
 import About from './src/About';
 
 // Declare global variable for html2pdf library
@@ -68,7 +68,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onClick }) => (
         aria-label={`Ver receita: ${recipe.name}`}
         className="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500"
     >
-        <img className="h-40 w-full object-cover" src={recipe.image} alt={recipe.name} />
+        <img className="h-40 w-full object-cover" src={getResizedImgurUrl(recipe.image, 'm')} alt={recipe.name} />
         <div className="p-4">
             <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
         </div>
@@ -267,7 +267,7 @@ export default function App() {
             const isFavorited = favoriteRecipeIds.has(selectedRecipe.id);
             return (
                  <div className="p-4 md:p-6" id={`recipe-pdf-content-${selectedRecipe.id}`}>
-                    <img src={selectedRecipe.image} alt={selectedRecipe.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"/>
+                    <img src={getResizedImgurUrl(selectedRecipe.image, 'l')} alt={selectedRecipe.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"/>
                     <h2 className="text-3xl font-bold text-brand-primary mb-2">{selectedRecipe.name}</h2>
                     <p className="text-brand-secondary font-medium mb-4">{selectedRecipe.category}</p>
 
@@ -324,7 +324,7 @@ export default function App() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             {categoriesData.map(cat => (
                                 <div key={cat.id} onClick={() => handleSelectCategory(cat)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleSelectCategory(cat)} aria-label={`Ver categoria ${cat.title}`} className="relative rounded-xl overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                    <img src={cat.image} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+                                    <img src={getResizedImgurUrl(cat.image, 'm')} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
                                     <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
                                         <h3 className="text-white font-bold text-xl">{cat.title}</h3>
                                         <p className="hidden md:block text-gray-200 text-sm">{cat.description}</p>
@@ -369,7 +369,7 @@ export default function App() {
                                 {favoriteRecipes.map(recipe => (
                                     <div key={recipe.id} className="bg-white p-3 rounded-xl shadow-sm flex items-center justify-between">
                                         <div className="flex items-center" onClick={() => handleSelectRecipe(recipe)} >
-                                          <img src={recipe.image} alt={recipe.name} className="w-16 h-16 object-cover rounded-lg mr-4 cursor-pointer"/>
+                                          <img src={getResizedImgurUrl(recipe.image, 's')} alt={recipe.name} className="w-16 h-16 object-cover rounded-lg mr-4 cursor-pointer"/>
                                           <div className="cursor-pointer">
                                               <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
                                               <p className="text-sm text-gray-500">{recipe.category}</p>
