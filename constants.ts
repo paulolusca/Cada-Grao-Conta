@@ -265,18 +265,19 @@ export const repurposingTips: string[] = [
 
 export const educationalVideos: EducationalVideo[] = [
     {
-        id: 'U476_V57uXk',
-        title: 'Como Aproveitar 100% dos Alimentos',
-        description: 'Dicas práticas para reduzir o desperdício na sua cozinha, aproveitando cascas, talos e sementes.'
+        id: 'eLq3GzSDnZc',
+        title: 'Desperdício de Alimentos',
+        description: 'Somos 8 bilhões de pessoas no mundo, e todas precisam comer diariamente. A produção de alimentação já é suficiente para todos, porém, 1 bilhão de pessoas ainda sofrem com a fome. E parte disso se deve ao desperdício'
     },
     {
-        id: 'eSOaM3G3ruE',
-        title: 'Compostagem Caseira: Passo a Passo',
+        id: 'fw8E0Mbq01s',
+        title: 'Desperdício de alimentos: É pior do que imaginamos',
         description: 'Aprenda a fazer uma composteira em casa para transformar lixo orgânico em adubo para suas plantas.'
     },
     {
-        id: 'dQw4w9WgXcQ',
-        title: 'A Economia Circular na Cozinha',
-        description: 'Entenda como pequenas mudanças na forma como cozinhamos podem ter um grande impacto no meio ambiente.'
+        id: 'LqZdG2_-PAg',
+        title: 'Quanto o desperdício de alimento custa ao Brasil? ',
+        description: 'Comprar apenas o necessário, aproveitar ao máximo cada alimento e fazer dos restos orgânicos adubo por meio da compostagem. Curitiba mostra o caminho contra o desperdício de alimentos.
+'
     }
 ];
