@@ -277,7 +277,6 @@ export const educationalVideos: EducationalVideo[] = [
     {
         id: 'LqZdG2_-PAg',
         title: 'Quanto o desperdício de alimento custa ao Brasil? ',
-        description: 'Comprar apenas o necessário, aproveitar ao máximo cada alimento e fazer dos restos orgânicos adubo por meio da compostagem. Curitiba mostra o caminho contra o desperdício de alimentos.
-'
+        description: 'Comprar apenas o necessário, aproveitar ao máximo cada alimento e fazer dos restos orgânicos adubo por meio da compostagem. Curitiba mostra o caminho contra o desperdício de alimentos.'
     }
 ];
