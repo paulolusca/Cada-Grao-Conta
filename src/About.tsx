@@ -7,22 +7,35 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const About = () => {
   const images = [
-    'https://i.imgur.com/381beb58-32a5-4cda-96a6-92c1f3cd04da',
-    'https://i.imgur.com/i5Avlm3.jpeg',
-    'https://i.imgur.com/uxWSBHW.jpeg',
-    'https://i.imgur.com/9tRQE9H.jpeg',
+    'https://i.imgur.com/9OcmEBT.jpeg',
+    'https://i.imgur.com/YySyotX.jpeg',
+    'https://i.imgur.com/HxZjyv1.jpeg',
+    'https://i.imgur.com/h9EvGFQ.jpeg',
+    'https://i.imgur.com/QfRJkym.jpeg',
+    'https://i.imgur.com/UHIj9Ru.jpeg',
+    'https://i.imgur.com/3O8JeLv.jpeg',
+    'https://i.imgur.com/jsA9w8H.jpeg',
+    'https://i.imgur.com/859nod5.jpeg',
+    'https://i.imgur.com/jMU4Ckn.jpeg',
+    'https://i.imgur.com/NIcPNp8.jpeg',
+    'https://i.imgur.com/H054w76.jpeg'
   ];
 
   return (
     <div className="p-4 md:p-6">
       <h2 className="text-2xl font-bold text-brand-primary mb-4">Sobre o Projeto</h2>
       <p className="text-brand-primary mb-4">
-        O aplicativo "Cada Grão Conta" é o resultado de um projeto pedagógico desenvolvido com os estudantes do 3º Ano do Ensino Fundamental da EMEF Professor João de Lima Paiva. A iniciativa buscou conectar a educação alimentar e nutricional com a valorização da cultura familiar e o combate ao desperdício de alimentos.
+        O aplicativo “Cada Grão Conta” nasceu como parte de um projeto pedagógico desenvolvido com os estudantes do 3º Ano A da Escola do Futuro ETI Padre Geraldo MC Cluskey, inspirado pelo desafio de unir sustentabilidade, protagonismo infantil e participação da comunidade escolar. A proposta surgiu da necessidade de refletir sobre o desperdício de alimentos na escola e de criar estratégias para transformá-lo em aprendizado significativo, dentro e fora da sala de aula.
       </p>
       <p className="text-brand-primary mb-4">
-        Ao longo do projeto, os estudantes pesquisaram receitas familiares, aprenderam sobre o aproveitamento integral dos alimentos e descobriram como a tecnologia pode ser uma ferramenta para compartilhar conhecimento. Este aplicativo é um convite para que todos possam cozinhar, aprender e fazer a diferença, um prato de cada vez.
+        Durante os meses de trabalho, os estudantes participaram de rodas de conversa, realizaram pesquisas, entrevistas e levantaram dados sobre o desperdício da alimentação escolar. Também exploraram formas criativas de reaproveitar alimentos, resgatando receitas de família e investigando pratos que utilizam cascas, talos e folhas. A cada etapa, o protagonismo infantil foi valorizado, permitindo que as crianças se reconhecessem como agentes capazes de impactar a comunidade com pequenas atitudes.
       </p>
-
+      <p className="text-brand-primary mb-4">
+        Os estudantes elaboraram cartazes, roteiros de entrevistas, vídeos e contribuíram ativamente no desenvolvimento do aplicativo. Além disso, o diálogo com as famílias ampliou o alcance da proposta: histórias, dicas e receitas transmitidas de geração em geração passaram a compor um repertório coletivo de saberes, fortalecendo laços culturais e afetivos.
+      </p>
+      <p className="text-brand-primary mb-4">
+      O resultado desse percurso é o aplicativo “Cada Grão Conta”, que reúne receitas de reaproveitamento e de famílias, acompanhadas de dicas e histórias que valorizam tanto a memória quanto a sustentabilidade. Mais do que um produto digital, o app é a materialização de um processo pedagógico que mostrou às crianças e à comunidade que pequenas ações podem gerar grandes transformações. Afinal, cada grão realmente conta.
+      </p>
       <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Galeria de Fotos do Projeto</h3>
       <Swiper
         modules={[Navigation, Pagination]}
@@ -39,12 +52,12 @@ const About = () => {
         ))}
       </Swiper>
 
-      <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Vídeos Educativos</h3>
+      <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Vídeos</h3>
       <div className="space-y-4">
         <div className="aspect-w-16 aspect-h-9">
           <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/U476_V57uXk"
+              src="https://www.youtube.com/embed"
               title="Como Aproveitar 100% dos Alimentos"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -54,7 +67,7 @@ const About = () => {
         <div className="aspect-w-16 aspect-h-9">
           <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/eSOaM3G3ruE"
+              src="https://www.youtube.com/embed"
               title="Compostagem Caseira: Passo a Passo"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
