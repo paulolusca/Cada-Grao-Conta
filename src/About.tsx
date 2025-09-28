@@ -1,4 +1,5 @@
 import React from 'react';
+import { getResizedImgurUrl } from './utils';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -47,7 +48,7 @@ const About = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt={`Foto do projeto ${index + 1}`} className="w-full h-64 object-cover" />
+            <img src={getResizedImgurUrl(image, 'l')} alt={`Foto do projeto ${index + 1}`} className="w-full h-64 object-cover" />
           </SwiperSlide>
         ))}
       </Swiper>
