@@ -1166,7 +1166,6 @@ const categoriesData: Category[] = [
     ]
   }
 ]
-];
 
 export { categoriesData };
 
