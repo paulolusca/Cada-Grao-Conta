@@ -18,7 +18,7 @@ export interface Category {
   recipes: Recipe[];
 }
 
-export type Tab = 'home' | 'about' | 'videos' | 'favorites' | 'contribute';
+export type Tab = 'home' | 'about' | 'videos' | 'favorites' | 'contribute' | 'generate';
 
 export type ViewMode = 'mobile' | 'desktop';
 
