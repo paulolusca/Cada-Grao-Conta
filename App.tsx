@@ -168,6 +168,7 @@ export default function App() {
 
     const handleSelectRecipe = (recipe: Recipe) => {
         setSelectedRecipe(recipe);
+        setSearchQuery('');
     };
 
     const handleBack = () => {
