@@ -21,7 +21,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem as cascas de banana com esponja em água corrente. Colocar sal. Passar a casca de banana na farinha de trigo, depois no ovo batido e por último na farinha de rosca. Fritar em óleo não muito quente.',
         category: 'Cascas de Frutas',
-        image: 'https://i.ytimg.com/vi/E8v4jYwD_fA/maxresdefault.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -36,7 +36,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar o abacaxi com uma escova em água corrente. Picar as cascas e fervê-las com água até amolecer. Bater no liquidificador com a água da fervura. Coar. Levar ao fogo com o açúcar, o coco e os cravos, mexendo até desprender do fundo da panela. Deixar esfriar e usar como quiser.',
         category: 'Cascas de Frutas',
-        image: 'https://cdn.panelaterapia.com/wp-content/uploads/2016/01/doce-casca-abacaxi.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -50,7 +50,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Cozinhar as cascas e cortar em tirinhas. Deixar numa travessa por 15 minutos junto com o açúcar, cravo e a canela em pau. Depois cozinhar na panela de pressão por 5 a 8 minutos e pronto. Deixar esfriar e saborear.',
         category: 'Cascas de Frutas',
-        image: 'https://i.ytimg.com/vi/o4w_7uV2-3M/maxresdefault.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -69,7 +69,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem as cascas, picar e bater no liquidificador com 1/2 xícara de chá de água. Reservar. Bater na batedeira, as gemas, a margarina e o açúcar até ficar bem homogêneo. Misturar a essa massa, as cascas de banana batidas, a farinha e o fermento, aos poucos, mexendo com uma colher de pau. Quando tudo estiver bem misturado, juntar as rodelas de banana e por último, as claras em neve mexendo devagar de baixo para cima até tudo ficar homogêneo. Colocar em forma untada e enfarinhada, polvilhar a canela e levar ao forno preaquecido à temperatura média por cerca de 30 minutos.',
         category: 'Cascas de Frutas',
-        image: 'https://d1uz88p17r663j.cloudfront.net/resized/720x450/cat_bolo_casca_banana_receitas_nestle.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -91,7 +91,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar as bananas e descascar. Separar as cascas para a massa. Bater as claras em neve e reservar na geladeira. Bater no liquidificador as gemas, o leite, a margarina, o açúcar e as cascas das bananas até obter uma mistura homogênea. Despejar a mistura em uma vasilha e acrescentar a farinha de rosca. Mexer bem e, por último misturar delicadamente as claras em neve e o fermento, colocar a massa em uma assadeira untada e levar ao forno por aproximadamente 40 minutos. Cobertura: Em uma panela faça um caramelo com o açúcar e a água. Acrescentar as bananas cortadas em rodelas e o suco de limão, deixando ferver um pouco. Cobrir o bolo ainda quente.',
         category: 'Cascas de Frutas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/4e3703115bb99103328e461a5bd8b2a3.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -108,7 +108,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Numa panela, colocar as cascas de banana com o açúcar e cozinhar até ficar pastoso. Acrescentar os demais ingredientes, exceto o chocolate granulado, e mexer até desprender do fundo da panela. Colocar em um prato e deixar esfriar. Fazer as bolinhas e passar no chocolate granulado, colocando-as em forminhas apropriadas.',
         category: 'Cascas de Frutas',
-        image: 'https://revistagloborural.globo.com/vida-na-fazenda/receitas/fotos/2016/11/brigadeiro-de-casca-de-banana.html.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -123,7 +123,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem as cascas de banana. Picar as cascas e bater no liquidificador com uma xícara de leite. Reservar. Adicionar às cascas já batidas o restante do leite, o açúcar, o amido e o chocolate. Misturar bem e levar ao fogo brando até levantar fervura. Abaixar o fogo e deixar cozinhar por 20 minutos, mexendo de vez em quando. Deixar esfriar e distribuir em potinhos.',
         category: 'Cascas de Frutas',
-        image: 'https://blog.tudogostoso.com.br/wp-content/uploads/2018/07/shutterstock_1081541810-1.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -137,7 +137,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Retire a casca verde da melancia e utilize a parte branca, corte em cubos e reserve. Faça uma calda com o açúcar, a água e o cravo, acrescente a casca da melancia e deixe cozinhar até apurar.',
         category: 'Cascas de Frutas',
-        image: 'https://www.tudoreceitas.com/pt/images/3/0/6/doce_de_casca_de_melancia_10603_600.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -155,7 +155,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lave muito bem a melancia, corte em pedaços e descasque. Rale a parte branca da casca da melancia em ralo fino. Ferva as cascas raladas em água e sal, até que fiquem macias e reserve. Cozinhe o peito de frango em água e sal, desfie e reserve. Misture todos os ingredientes e sirva.',
         category: 'Cascas de Frutas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/49942a6d7f0222a7620a2e7c4856f70e.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -168,7 +168,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Corte a casca da laranja em quatro. Deixe-as de molho em água de um dia para outro. Troque a água várias vezes. Corte as cascas pelo meio, depois em fatias finas. Coloque em uma panela, cubra com água e ferva por mais ou menos 15 minutos. Escorra a água. Coloque o mesmo peso das cascas em quantidade de açúcar, cravo e canela. Leve as cascas ao fogo para apurar.',
         category: 'Cascas de Frutas',
-        image: 'https://receidelicia.com.br/wp-content/uploads/2020/08/doce-casca-de-laranja-em-calda.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -188,7 +188,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Cozinhe a casca de melão até ficar macia e reserve. Em uma panela, aqueça o óleo, doure a cebola e o alho. Acrescente os talos de agrião, a casca de melão e refogue. Junte o suco e o sal. Deixe levantar fervura. Por último, acrescente o tomate picado e a farinha de mandioca. Mexa bem e sirva quente ou frio.',
         category: 'Cascas de Frutas',
-        image: 'https://i.ytimg.com/vi/1_83P12oD6M/maxresdefault.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -201,7 +201,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Deixar de molho na água as cascas dos mamões de um dia para outro. Picá-las, colocá-las numa panela e dar três fervuras, acrescentando as cascas sempre quando levantar fervura. Trocar a água a cada fervura. Na quarta fervura, deixar esfriar, bater no liquidificador adicionando 1 xícara (chá) de água e passar por uma peneira. Levar ao fogo com o açúcar até dar ponto (quando desprender do fundo da panela).',
         category: 'Cascas de Frutas',
-        image: 'https://www.acasaencantada.com.br/wp-content/uploads/2021/04/doce-de-casca-de-mamao.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -218,7 +218,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Para obter o caldo de casca do abacaxi, retirar as cascas de um abacaxi e ferver com 4 xícaras (chá) de água por cerca de 20 minutos. Reservar. Bater as claras em neve, misturar as gemas e continuar batendo. Misturar aos poucos o açúcar e a farinha de trigo, sem parar de mexer. Acrescentar o fermento e uma xícara de caldo de casca de abacaxi. Misturar bem e assar em forma untada e forno moderado. Depois de assado, virar em um prato e, ainda quente, furar com um garfo e jogar sobre ele o restante do caldo de casca do abacaxi com 1 colher (sopa) de açúcar.',
         category: 'Cascas de Frutas',
-        image: 'https://arianapazzini.com.br/wp-content/uploads/2018/11/Bolo-de-casca-de-abacaxi.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -232,7 +232,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar muito bem as cascas e cortar em tirinhas. Levar ao fogo com a água e deixar cozinhar. Jogar a água fora e lavar as cascas em água corrente. Reservar. Em uma panela colocar o açúcar e a água da calda e levar ao fogo para ferver. Quando começar a engrossar, acrescentar as cascas e deixar no fogo até que elas fiquem cozidas. Pode servir gelada com calda, ou retirar da calda, escorrer em uma peneira e depois passar no açúcar e deixar secar.',
         category: 'Cascas de Frutas',
-        image: 'https://cooknenjoy.com/wp-content/uploads/2017/08/casca-laranja-cristalizada-02.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -248,7 +248,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Colocar em uma panela todos os ingredientes e levar ao fogo para cozinhar, mexendo sempre até soltar do fundo da panela. Deixar esfriar. Fazer os docinhos enrolando bolinhas e colocá-los em forminhas de papel. Se quiser, pode-se passar as bolinhas em côco ralado.',
         category: 'Cascas de Frutas',
-        image: 'https://www.receiteria.com.br/wp-content/uploads/receitas-de-docinho-de-abacaxi-com-coco.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -263,7 +263,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Caramelizar 100 g de açúcar. Acrescentar a entrecasca de melancia ralada e mexer em fogo brando. Acrescentar o côco ralado, 250 g de açúcar e 300 ml de água. Cozinhar até soltar do fundo da panela. Passar a manteiga numa superfície lisa e colocar o doce a colheradas.',
         category: 'Cascas de Frutas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/48a8c2f15a1a1f0a25fae1620c353985.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -281,7 +281,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Dissolver o fermento no açúcar, acrescentar as gemas, margarina, suco, sal e misturar sempre a farinha de trigo até formar uma massa que não grude nas mãos. Dividir a massa em duas ou três partes, enrolar os pães e deixar crescer até dobrar de tamanho. Pincelar com gema e levar para assar.',
         category: 'Cascas de Frutas',
-        image: 'https://receitinhas.com.br/wp-content/uploads/2017/03/pao-doce-de-abacaxi-1.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -296,7 +296,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Separe a casca verde da entrecasca da melancia e lave. Rale as cascas até que fiquem em pedaços pequenos. Adicione em uma panela o alho e a manteiga e refogue. Adicione a farinha de mandioca, a casca de melancia e o sal. Misture e sirva.',
         category: 'Cascas de Frutas',
-        image: 'https://boomi.com.br/wp-content/uploads/2021/03/farofa-casca-melancia.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       }
     ]
@@ -319,7 +319,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar a abóbora e descascar. Passar as cascas no ralador grosso, cozinhar por 10 minutos. Escorrer e reservar na geladeira. Depois de refrigerada, juntar o tomate, a cebola, o azeite e os temperos da sua preferência. Servir em seguida.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://images.pexels.com/photos/1059942/pexels-photo-1059942.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -341,7 +341,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Ferver rapidamente as folhas de beterraba em um litro de água diluída com o caldo de galinha. Reservar. Rechear cada folha com uma fatia de cebola, um talo de espinafre e um talo de beterraba levemente aferventados. Enrolar como um charutinho e dispor em um refratário. Para o molho, derreter a margarina ou manteiga, acrescentar a farinha de trigo e colocar o leite aos poucos, mexendo para não empelotar. Verificar o sal e deixar cozinhar. Colocar o molho sobre as folhas de beterraba recheadas, polvilhar o queijo ralado e levar ao forno preaquecido para gratinar.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.montacasa.com.br/wp-content/uploads/2019/08/charuto-de-folha-de-beterraba-1.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -360,7 +360,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Refogar em pouco óleo o bacon, a cebola e o alho, nessa ordem. Jogar o ovo batido, com sal, e deixe fritar junto. Depois de frito, cortar o ovo em pedaços. Jogar as folhas de couve-flor no refogado, usando também os talos mais finos, se desejar. Colocar sal e espere abafar bem. Se necessário, adicionar um pouco de água. Adicionar a farinha de mandioca, mexer bem e colocar uma xícara de água com sal, uma colher de sopa de óleo e uma colher de sopa de azeite de oliva. Se a farofa estiver muito seca, adicionar mais água e óleo. Mexer bem e adicionar a pimenta do reino, servir a seguir.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.receiteria.com.br/wp-content/uploads/receitas-de-farofa-de-folha-de-couve-flor-0.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -380,7 +380,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar o arroz e escorrer. Numa panela em fogo médio, adicionar os talos de brócolis e a cenoura, o arroz e duas xícaras de caldo. Tampar a panela e deixar cozinhar por 10 minutos. Abrir a panela e à medida que o caldo for reduzindo acrescentar uma nova concha. Repetir o processo até terminar o caldo. Deixar por mais 5 minutos e servir.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://images.pexels.com/photos/5638575/pexels-photo-5638575.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -406,7 +406,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Da farinha de trigo tostada: colocar 1 colher de sopa de óleo em uma panela e acrescentar 5 colheres de sopa cheias de farinha de trigo. Mexer até a farinha ficar levemente dourada. Reservar. Massa: misturar a manteiga com a farinha com ajuda de um garfo até obter uma farofa. Acrescentar o sal e misturar bem. Acrescentar o ovo e a água até obter uma massa macia que não grude nas mãos. Guardar na geladeira dentro de um saco plástico por mais ou menos 3 horas. Recheio: em uma panela refogar o alho-poró, a abóbora e o curry em uma colher de óleo, até a abóbora ficar macia. Acrescentar o caldo de galinha diluído em água morna, mexendo bem. Adicionar aos poucos a farinha tostada, alternando com o leite até formar um creme homogêneo. Por último, acrescente o creme de leite e desligue o fogo. Abrir a massa com ajuda de um rolo em uma superfície enfarinhada e colocar em forma untada com manteiga. Fazer pequenos furos na massa com um garfo. Levar para pré-assar em forno quente por 15 minutos. Retirar a massa do forno, adicionar o recheio e levar para assar por mais 15 a 20 minutos.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -423,7 +423,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem os talos e cortar em cubinhos. Em seguida leve-os para ferver rapidamente. Escorrer os talos e apertar bem para tirar o excesso de água. Bater os ovos, acrescentando o restante dos ingredientes, deixando o fermento em pó por último. Misturar bem. Fritar os bolinhos às colheradas em óleo bem quente.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.acasaencantada.com.br/wp-content/uploads/2020/09/bolinho-de-talos-e-folhas.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -440,7 +440,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Bater as cascas e as folhas depois de cozidas no liquidificador e passar numa peneira. Em seguida acrescentar os demais ingredientes, misturando bem. Colocar numa forma untada e levar ao forno preaquecido até dourar.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/3e3518e351474274c107c13a01662584.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -455,7 +455,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem as folhas em água corrente e deixá-las de molho em água com produto para higienização de verduras. Retirar do molho e escorrer. Alisar bem as folhas de beterraba, colocar umas sobre as outras em grupos de quatro ou cinco unidades; enrolar bem e cortar bem fininho, a partir da ponta, igual a couve manteiga. Reservar. Montar o prato começando com as alfaces, espalhar sobre elas as tiras das folhas de beterraba, as rodelas de tomate e, por fim, as folhas de agrião. Regar com o molho de sua preferência, não se esquecendo do azeite de oliva.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://static.itdg.com.br/images/auto-auto/842e0520d200424578b8e0e67b2d4157/salada-de-folha-de-beterraba.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -473,7 +473,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Pique todos os talos e folhas bem fininhos. Refogue com os temperos de costume e reserve. Bata no liquidificador todos os outros ingredientes, um de cada vez. Misture o refogado à massa. Unte a forma e asse em forno preaquecido durante 30 minutos.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://anamariabraga.globo.com/wp-content/uploads/2020/09/torta-de-talos-e-folhas.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -489,7 +489,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Em uma panela média, aqueça o óleo e refogue o alho picado, sal a gosto, arroz e os talos à gosto. Adicione água e tampe pela metade a panela até que a água seque e o arroz cozinhe e fique macio, se necessário, adicione mais água.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://blog.raizs.com.br/wp-content/uploads/2021/04/arroz-com-talos.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -506,7 +506,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Distribua em um tabuleiro as cascas e sementes higienizadas e regue com azeite. Adicione o cheiro verde, a cebolinha, sal e pimenta do reino à gosto. Leve ao forno baixo por aproximadamente 15 minutos ou até que fiquem douradas. Sirva.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.receitasnestle.com.br/images/recipe-images/8e5470fa-4081-4560-b6f0-d53344d67316',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -525,7 +525,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Coloque folhas e talos no liquidificador com a água e bata bem. Junte o ovo, o açúcar, o sal, o fermento e o óleo e continue batendo. Em uma vasilha, coloque a farinha de trigo e despeje a mistura do liquidificador. Amasse até desgrudar das mãos. Deixe a massa descansar até dobrar de volume. Amasse novamente e forme os pães, colocando em uma assadeira untada. Deixe a massa crescer novamente. Leve para assar em forno moderado a 180°C por aproximadamente 40 minutos.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.brasildefatope.com.br/wp-content/uploads/2019/01/p%C3%A3o-de-br%C3%B3colis-1024x576.png',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -542,7 +542,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Cozinhe as cascas das batatas e depois bata-as no liquidificador. Coloque a massa numa tigela, acrescente os ovos, a farinha, o sal, o fermento e a salsinha. Misture bem. Depois, aqueça o óleo e faça os bolinhos com ajuda de uma colher e frite-os.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/8c4b14d334538e1423456c702f3775d1.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -561,7 +561,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Corte o pão em fatias de mais ou menos 1cm de largura. Coloque-as de molho com 1/3 de xícara de chá de água e reserve. Aqueça o óleo e doure a farinha, junte com o leite e mexa até engrossar e reserve. Pique os talos, junte o pão amolecido, as gemas batidas, a salsa, o orégano e o sal. Misture bem. Por último, acrescente as claras em neve. Mexa delicadamente e acrescente o creme branco. Coloque em uma forma untada e leve para assar por 30 minutos.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://comidadeverdadebebe.files.wordpress.com/2015/07/sufle-de-talos-e-folhas-de-brocolis-com-queijo-minas.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -653,15 +653,7 @@ const categoriesData: Category[] = [
         category: 'Cascas, Talos e Folhas',
         image: 'https://i.imgur.com/DWxNdAK.jpeg',
         source: 'Receita da família da Millena Silva de Lima'
-      }
-    ]
-  },
-  {
-    id: 'flores-comestiveis',
-    title: 'Flores Comestíveis',
-    description: 'Leve a beleza e o sabor das flores para o seu prato. Uma categoria delicada com receitas que utilizam flores comestíveis para criar pratos únicos e surpreendentes.',
-    image: 'https://i.imgur.com/x0j4Z7r.jpeg',
-    recipes: [
+      },
       {
         id: 'flor_de_abobora_a_milanesa',
         name: 'Flor de abóbora à milanesa \'Fiore de Zucca\'',
@@ -674,9 +666,29 @@ const categoriesData: Category[] = [
           'Óleo para fritar'
         ],
         instructions: 'Retirar o miolo das flores e o caule. Deixar as sépalas verdes que seguram as pétalas. Lavar bem as flores, mas com cuidado para não rasgar. Colocar cada um dos ingredientes em um prato separado. Passar a flor de abóbora fechada no ovo e em seguida na farinha de trigo. Passar novamente no ovo e finalmente na farinha de rosca. Colocar o óleo numa frigideira o suficiente para que as flores fiquem submersas, e quando estiver quente, coloque-as para fritar. Virar com cuidado, para que a flor fique dourada e crocante por inteiro. À medida que as flores estiverem douradas, retire-as do fogo e coloque-as sobre um papel toalha para retirar o excesso de óleo. Servir quentinha.',
-        category: 'Flores Comestíveis',
-        image: 'https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3353-c90a3fc42b93478d1f05456b3e02028d.jpg',
+        category: 'Cascas, Talos e Folhas',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
+      },
+      {
+        id: 'pao_de_abobora_com_sementes',
+        name: 'Pão de Abóbora com Sementes',
+        ingredients: [
+          '1 xícara (chá) de abóbora sem casca',
+          '3 xícaras (chá) de água',
+          '2 xícaras (chá) de farinha de trigo',
+          '1 colher (sobremesa) de açúcar',
+          '1 ovo',
+          '4 colheres (sopa) de semente de abóbora in natura',
+          '1/2 tablete de fermento biológico',
+          '1 colher (sobremesa) de sal',
+          '1 colher (sopa) de óleo',
+          '1 e 1/2 colher (sopa) de leite'
+        ],
+        instructions: 'Cozinhe a abóbora com 3 xícaras (chá) de água até que fique macia. Escorra a água e amasse a abóbora com um garfo, formando um purê. Deixe esfriar. Em uma travessa, misture a farinha de trigo, o açúcar, o ovo, a abóbora, a semente de abóbora, o fermento, o sal, o óleo e, por último, o leite. Amasse bem. Deixe a massa descansar, coberta por um plástico, em uma assadeira untada com óleo, por 15 minutos. Transfira para uma mesa limpa, seca e já polvilhada com farinha de trigo. Divida a massa ao meio e modele enrolando em espiral cada pedaço com um rolo de cerca de 60 cm de comprimento. Depois, coloque os pães em uma assadeira untada com óleo e deixe fermentar por 30 a 40 minutos. Asse em forno preaquecido, a 160 °C, por aproximadamente 20 minutos.',
+        category: 'Cascas, Talos e Folhas',
+        image: 'https://via.placeholder.com/600x400',
+        source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       }
     ]
   },
@@ -696,7 +708,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Descascar a manga e cortar em fatias. Cozinhar até amolecer junto com o suco e o sal. Se usar panela de pressão, cozinhar por 15 minutos após o início da pressão. Destampar e ir mexendo até secar bem o caldo. Para ficar em ponto de geleia, cozinhar até soltar bem do fundo da panela.',
         category: 'Frutas Maduras',
-        image: 'https://images.pexels.com/photos/5945763/pexels-photo-5945763.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -808,6 +820,41 @@ const categoriesData: Category[] = [
         source: 'Receita da família de Maria Fernanda Queiroz de Almeida',
         extra: 'História: "Era uma receita da minha Vovó Tereza e da minha Mãe Eliana.\"'
       },
+              id: 'pudim-pao-amanhecido-2',
+        name: 'Pudim de Pão Amanhecido (versão 2)',
+        ingredients: [
+          'Pães amanhecidos',
+          'Leite',
+          'Açúcar',
+          'Ovos',
+          'Canela',
+          'Maisena'
+        ],
+        instructions: 'No liquidificador, coloque o pão picado, junte o leite, os ovos, o açúcar e a maisena. Deixe bater por cinco minutos. Ingredientes para a Calda: Uma xícara de açúcar e meia xícara de água. Coloque o açúcar em uma panela e deixe derreter. Depois de derretido, coloque a água e deixe ferver até virar uma calda. Despeje a mistura do pudim em uma forma untada com a calda e leve ao forno em banho-maria por mais ou menos 2 horas.',
+        category: 'Sobras Criativas',
+        image: 'https://i.imgur.com/V4mjYFu.jpeg',
+        source: 'Receita da família de Vítor Moura Viana',
+        extra: 'Dica: "Espete um palito de dente no pudim, e se sair limpo, está pronto. Desenforme em um recipiente, deixe gelar e bom apetite!\"'
+      },
+      {
+        id: 'pudim-pao',
+        name: 'Pudim de Pão',
+        ingredients: [
+          'Pães amanhecidos',
+          'Leite',
+          'Ovos',
+          'Açúcar',
+          'Manteiga',
+          'Farinha de trigo',
+          'Óleo',
+          'Fermento em pó'
+        ],
+        instructions: 'Em uma tigela, coloque os pães e cubra com o leite. Deixe de molho até que os pães fiquem bem macios e absorvam o leite. Amassar bem os pães com o leite até obter uma mistura homogênea. Adicione os ovos, a manteiga, a farinha de trigo, o açúcar e o óleo. Mexa bem. Por último, acrescente o fermento em pó e misture delicadamente. Unte uma forma com manteiga e despeje a massa. Leve ao forno pré-aquecido a 180°C por aproximadamente 40 minutos, ou até dourar e firmar. Deixe esfriar antes de desenformar e, se desejar, polvilhe coco ralado por cima.',
+        category: 'Sobras Criativas',
+        image: 'https://static.itdg.com.br/images/360-240/ba68e781f9b13dab4569483686f2ac41/352648-original.jpg',
+        source: 'Receita da família de Ana Julia Batista da Silva',
+        extra: 'História: "Minha bisavó fazia no café da manhã para o meu pai.\"'
+      },
       {
         id: 'sopa-legumes-nordeste',
         name: 'Sopa de Legumes do Nordeste',
@@ -823,34 +870,6 @@ const categoriesData: Category[] = [
         image: 'https://i.imgur.com/0gIOjJX.jpeg',
         source: 'Receita da família do David Menezes da Silva',
         extra: 'História: “Minha avó materna fazia para a minha mãe quando ela era criança”'
-      }
-    ]
-  },
-  {
-    id: 'sementes',
-    title: 'Sementes',
-    description: 'Pequenas no tamanho, gigantes em nutrientes! Aprenda a usar sementes de abóbora e outras hortaliças em pães e petiscos crocantes e cheios de saúde.',
-    image: 'https://i.imgur.com/W2f9bVw.jpeg',
-    recipes: [
-      {
-        id: 'pao_de_abobora_com_sementes',
-        name: 'Pão de Abóbora com Sementes',
-        ingredients: [
-          '1 xícara (chá) de abóbora sem casca',
-          '3 xícaras (chá) de água',
-          '2 xícaras (chá) de farinha de trigo',
-          '1 colher (sobremesa) de açúcar',
-          '1 ovo',
-          '4 colheres (sopa) de semente de abóbora in natura',
-          '1/2 tablete de fermento biológico',
-          '1 colher (sobremesa) de sal',
-          '1 colher (sopa) de óleo',
-          '1 e 1/2 colher (sopa) de leite'
-        ],
-        instructions: 'Cozinhe a abóbora com 3 xícaras (chá) de água até que fique macia. Escorra a água e amasse a abóbora com um garfo, formando um purê. Deixe esfriar. Em uma travessa, misture a farinha de trigo, o açúcar, o ovo, a abóbora, a semente de abóbora, o fermento, o sal, o óleo e, por último, o leite. Amasse bem. Deixe a massa descansar, coberta por um plástico, em uma assadeira untada com óleo, por 15 minutos. Transfira para uma mesa limpa, seca e já polvilhada com farinha de trigo. Divida a massa ao meio e modele enrolando em espiral cada pedaço com um rolo de cerca de 60 cm de comprimento. Depois, coloque os pães em uma assadeira untada com óleo e deixe fermentar por 30 a 40 minutos. Asse em forno preaquecido, a 160 °C, por aproximadamente 20 minutos.',
-        category: 'Sementes',
-        image: 'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg',
-        source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       }
     ]
   },
@@ -877,7 +896,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Refogar a cebola no óleo. Colocar o peixe, as azeitonas picadas, a ervilha, o pimentão, o milho, o molho de tomate e a água. Sal e pimenta a gosto. Quando começar a ferver, colocar a farinha de milho mexendo sempre, até se desprender do fundo. Despejar numa forma redonda de furo untada com azeite. Servir frio.',
         category: 'Sobras Criativas',
-        image: 'https://images.pexels.com/photos/12733945/pexels-photo-12733945.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -892,7 +911,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Juntar as sobras de arroz ao molho de tomate, deixando uma sobra de molho para a finalização, espalhar essa mistura sobre uma travessa refratária untada com azeite. Colocar as fatias de presunto intercalando com o queijo muçarela. Cobrir com o restante do molho de tomate, terminando com o queijo ralado. Levar ao forno preaquecido para gratinar.',
         category: 'Sobras Criativas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/4345511e403487f23c9133851b3f5c1a.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -909,7 +928,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Bater o arroz no liquidificador (ou moer na máquina). Ainda no liquidificador, juntar os ovos, o queijo ralado, o sal e farinha de trigo suficiente para formar uma massa mole. Pegar uma porção da massa com uma colher e colocar na frigideira com óleo bem quente e fritar dos dois lados. Escorrer em papel toalha.',
         category: 'Sobras Criativas',
-        image: 'https://images.pexels.com/photos/10777558/pexels-photo-10777558.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -929,7 +948,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Refogar a cebola e o alho no azeite. Acrescentar azeitonas e batatas, colocar as sobras de carne e refogar bem. Colocar as outras sobras, sempre refogando. Começar com os ingredientes úmidos como couve, acelga, etc. Como tudo já está previamente temperado, não há necessidade de colocar mais sal. Adicionar alcaparras, cúrcuma, páprica, orégano e depois o feijão. Por último, colocar o arroz, mexendo para que fique misturado de forma homogênea. Então, adicionar a farinha de milho e misturar.',
         category: 'Sobras Criativas',
-        image: 'https://images.pexels.com/photos/5639430/pexels-photo-5639430.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -945,7 +964,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Corte os pãezinhos em rodelas com aproximadamente 2 cm de espessura cada. Distribua as rodelas de pão no fundo do refratário. No liquidificador, bata o leite, os ovos e o açúcar. Acrescente as raspas de limão e o coco. Despeje a mistura sobre o pão. Asse em banho-maria no forno preaquecido por 30 minutos. Espere amornar e leve à geladeira para servir gelado.',
         category: 'Sobras Criativas',
-        image: 'https://images.pexels.com/photos/10155535/pexels-photo-10155535.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -1019,7 +1038,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Depois de lavadas, ferver as cascas de abacaxi na água por aproximadamente dez minutos. Em seguida, desligar o fogo e acrescentar as folhas de hortelã para dar sabor. Tampar e deixar por mais cinco minutos descansando. Depois disso, basta bater no liquidificador, coar e adoçar a gosto, mexendo com a canela.',
         category: 'Sucos e Bebidas',
-        image: 'https://images.pexels.com/photos/8926019/pexels-photo-8926019.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -1032,7 +1051,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar o abacaxi. Cortar as cascas em pedaços e bater no liquidificador com um pouco de água. Coar e acrescentar água e açúcar a gosto.',
         category: 'Sucos e Bebidas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/777f9801734994d509d316e6d11f0a20.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -1045,7 +1064,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar o abacaxi com escova em água corrente, em seguida descasque a fruta. Mergulhar as cascas e um punhado de folhas de hortelã numa jarra com água e levar à geladeira.',
         category: 'Sucos e Bebidas',
-        image: 'https://images.pexels.com/photos/1458865/pexels-photo-1458865.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -1059,7 +1078,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Pegue a casca de quatro maçãs e coloque-as de molho em um litro de água fria para infusão. Descasque o gengibre, corte-o em tiras finas e coloque junto à água com as cascas da fruta. Leve a mistura ao fogo. Quando levantar fervura, abaixe o fogo e deixe apurar por mais dez minutos. Coe antes de servir.',
         category: 'Sucos e Bebidas',
-        image: 'https://www.dicasdemulher.com.br/wp-content/uploads/2019/11/cha-de-casca-de-maca-0.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'CÂMARA MUNICIPAL DE TANGARÁ DA SERRA. Caderno de Receita: Reaproveitamento de Alimentos. Tangará da Serra: Câmara Municipal de Tangará da Serra, 2021.'
       },
       {
@@ -1072,7 +1091,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Bata todos os ingredientes no liquidificador. Sirva coado ou não.',
         category: 'Sucos e Bebidas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/0b8e967a-1150-48e0-a7d5-22d73d6118d0.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -1088,7 +1107,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Bater no liquidificador as cenouras com 2 copos de água. Coar em um guardanapo e reservar o resíduo. À parte, bater o suco de cenoura, o suco de limão e a casca de laranja. Coar em peneira e acrescentar o restante da água, o açúcar e o gelo.',
         category: 'Sucos e Bebidas',
-        image: 'https://static.itdg.com.br/images/auto-auto/61962383a5e172f3a61f5f3e721516e8/refrigerante-caseiro-de-laranja.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -1102,7 +1121,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Ferver a casca do abacaxi com 1 litro de água para fazer o suco. Bater no liquidificador o suco da casca e acrescentar a couve picada e o açúcar. Coar e servir com gelo.',
         category: 'Sucos e Bebidas',
-        image: 'https://images.pexels.com/photos/1346345/pexels-photo-1346345.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -1116,7 +1135,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Bater primeiro a beterraba e coar. Adicionar o restante dos ingredientes e bater bem. Coar e bater novamente.',
         category: 'Sucos e Bebidas',
-        image: 'https://images.pexels.com/photos/8141168/pexels-photo-8141168.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -1129,7 +1148,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem as maçãs e depois descascá-las. Levar ao fogo as cascas e a água para ferver. Bater no liquidificador, coar e adoçar a gosto. Completar com água gelada. OBS.: Se for para consumo imediato, não precisa de cozimento.',
         category: 'Sucos e Bebidas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/0b147318-7f2e-4a65-b778-98e85cf6131c.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -1142,7 +1161,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lavar bem as cascas, bater no liquidificador com água. A seguir, coar bem e adoçar a gosto. Dica: Podemos utilizar apenas a casca de uma fruta, como a de abacaxi, maçã, manga etc.',
         category: 'Sucos e Bebidas',
-        image: 'https://www.receitasnestle.com.br/sites/default/files/srh_recipes/0f52b61f-1352-4415-9bc4-3d02a00c608f.jpg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       },
       {
@@ -1160,13 +1179,12 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Lave bem as frutas e corte em pedaços. Em uma panela, leve ao fogo médio o açúcar, o cravo e a canela para caramelizar. Acrescente as frutas e a água e deixe cozinhar. Adicione o chá de sua preferência (opcional), desligue o fogo e deixe descansar com a panela tampada. Coar.',
         category: 'Sucos e Bebidas',
-        image: 'https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg',
+        image: 'https://via.placeholder.com/600x400',
         source: 'RIO DE JANEIRO (Cidade). Secretaria Municipal de Saúde. Cartilha de Receitas de Aproveitamento Integral dos Alimentos. Rio de Janeiro: Secretaria Municipal de Saúde, 2024.'
       }
     ]
   }
 ]
-
 export { categoriesData };
 
 export const allRecipes: Recipe[] = categoriesData.flatMap(category =>
