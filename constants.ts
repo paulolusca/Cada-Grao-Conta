@@ -820,6 +820,7 @@ const categoriesData: Category[] = [
         source: 'Receita da família de Maria Fernanda Queiroz de Almeida',
         extra: 'História: "Era uma receita da minha Vovó Tereza e da minha Mãe Eliana.\"'
       },
+      {
               id: 'pudim-pao-amanhecido-2',
         name: 'Pudim de Pão Amanhecido (versão 2)',
         ingredients: [
