@@ -11,7 +11,7 @@ jest.mock('@google/generative-ai', () => {
   });
 
   const mockGetGenerativeModel = jest.fn((args: { model: string }) => {
-    if (args.model !== 'gemini-1.0-pro') {
+    if (args.model !== 'gemini-1.5-flash-latest') {
       throw new Error(`404 Not Found: Model '${args.model}' not found.`);
     }
     return {
@@ -38,6 +38,6 @@ describe('geminiService', () => {
     await generateRecipe('test ingredients');
     const mockGoogleGenerativeAI = require('@google/generative-ai').GoogleGenerativeAI;
     const mockGenAIInstance = mockGoogleGenerativeAI.mock.results[0].value;
-    expect(mockGenAIInstance.getGenerativeModel).toHaveBeenCalledWith({ model: 'gemini-1.0-pro' });
+    expect(mockGenAIInstance.getGenerativeModel).toHaveBeenCalledWith({ model: 'gemini-1.5-flash-latest' });
   });
 });
