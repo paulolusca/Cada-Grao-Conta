@@ -15,7 +15,8 @@ import {
     ArrowLeft, 
     Trash2, 
     Download,
-    LoaderCircle
+    LoaderCircle,
+    Sparkles
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode } from './types';
@@ -23,6 +24,7 @@ import { categoriesData, allRecipes, educationalVideos } from './constants';
 import * as firebaseService from './services/firebaseService';
 import { getResizedImgurUrl } from './src/utils';
 import About from './src/About';
+import GenerateRecipes from './src/GenerateRecipes';
 
 // Declare global variable for html2pdf library
 declare const html2pdf: any;
@@ -411,6 +413,8 @@ export default function App() {
                         </iframe>
                     </div>
                 );
+            case 'generate':
+                return <GenerateRecipes />;
             default:
                 return null;
         }
@@ -475,6 +479,7 @@ export default function App() {
                         <NavItem icon={<Home />} label="Início" isActive={activeTab === 'home'} onClick={() => handleNavigation('home')} />
                         <NavItem icon={<Info />} label="Sobre" isActive={activeTab === 'about'} onClick={() => handleNavigation('about')} />
                         <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
+                        <NavItem icon={<Sparkles />} label="Gerar" isActive={activeTab === 'generate'} onClick={() => handleNavigation('generate')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
                         <NavItem icon={<Share2 />} label="Contribuir" isActive={activeTab === 'contribute'} onClick={() => handleNavigation('contribute')} />
                     </nav>
