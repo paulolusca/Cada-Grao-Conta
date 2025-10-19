@@ -98,6 +98,14 @@ export default function App() {
     const [favoriteRecipes, setFavoriteRecipes] = useState<Recipe[]>([]);
     const [isFirebaseReady, setIsFirebaseReady] = useState(false);
 
+    // ======== DEVICE DETECTION EFFECT ======== //
+    useEffect(() => {
+        const isDesktop = window.innerWidth > 768;
+        if (isDesktop) {
+            setViewMode('desktop');
+        }
+    }, []);
+
     // ======== FIREBASE & AUTH EFFECT ======== //
     useEffect(() => {
         try {
