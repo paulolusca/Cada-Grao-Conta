@@ -52,7 +52,7 @@ const GenerateRecipes: React.FC = () => {
             <button
                 onClick={handleGenerate}
                 disabled={isLoading}
-                className="w-full bg-brand-primary text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="w-full bg-brand-primary text-white font-semibold py-3 px-4 rounded-full flex items-center justify-center shadow-lg transform transition-all hover:bg-amber-600 hover:-translate-y-1 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none"
             >
                 {isLoading ? (
                     <>
