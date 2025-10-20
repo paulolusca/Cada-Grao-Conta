@@ -48,7 +48,7 @@ const About = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={getResizedImgurUrl(image, 'l')} alt={`Foto do projeto ${index + 1}`} className="w-full h-64 object-cover" />
+            <img src={getResizedImgurUrl(image, 'l')} alt={`Foto do projeto ${index + 1}`} className="w-full h-64 object-contain" />
           </SwiperSlide>
         ))}
       </Swiper>
