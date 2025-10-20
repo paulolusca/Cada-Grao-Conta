@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { getResizedImgurUrl } from './utils';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/thumbs';
-import { Navigation, Thumbs } from 'swiper/modules';
-import type { Swiper as SwiperCore } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const About = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
   const images = [
     'https://i.imgur.com/9OcmEBT.jpeg',
     'https://i.imgur.com/YySyotX.jpeg',
@@ -42,31 +39,15 @@ const About = () => {
       </p>
       <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Galeria de Fotos do Projeto</h3>
       <Swiper
-        modules={[Navigation, Thumbs]}
+        modules={[Navigation, Pagination]}
         spaceBetween={50}
         slidesPerView={1}
         navigation
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+        pagination={{ clickable: true }}
         className="rounded-lg overflow-hidden"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={getResizedImgurUrl(image, 'l')} alt={`Foto do projeto ${index + 1}`} className="w-full h-96 object-contain" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[Thumbs]}
-        className="rounded-lg overflow-hidden mt-2 cursor-pointer"
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={getResizedImgurUrl(image, 's')} alt={`Thumbnail do projeto ${index + 1}`} className="w-full h-24 object-cover" />
             <img src={getResizedImgurUrl(image, 'l')} alt={`Foto do projeto ${index + 1}`} className="w-full h-64 object-contain" />
           </SwiperSlide>
         ))}
