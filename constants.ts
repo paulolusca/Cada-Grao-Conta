@@ -55,7 +55,7 @@ const categoriesData: Category[] = [
       },
       {
         id: 'bolo_de_cascas_de_banana_1',
-        name: 'Bolo de Cascas de Banana (versão 1)',
+        name: 'Bolo de Cascas de Banana',
         ingredients: [
           '2 xícaras de chá de cascas de banana nanica madura picadas',
           '2 bananas cortadas em rodelas pequenas',
@@ -566,7 +566,7 @@ const categoriesData: Category[] = [
       },
       {
         id: 'bolo-casca-banana-2',
-        name: 'Bolo de Casca de Banana (versão 2)',
+        name: 'Bolo de Casca de Banana',
         ingredients: [
           'Cascas de banana',
           'Açúcar',
@@ -643,7 +643,7 @@ const categoriesData: Category[] = [
       },
       {
         id: 'suco-casca-abacaxi-2',
-        name: 'Suco de Casca de Abacaxi (versão 2)',
+        name: 'Suco de Casca de Abacaxi',
         ingredients: [
           'Cascas de abacaxi bem lavadas',
           'Água',
@@ -822,7 +822,7 @@ const categoriesData: Category[] = [
       },
       {
               id: 'pudim-pao-amanhecido-2',
-        name: 'Pudim de Pão Amanhecido (versão 2)',
+        name: 'Pudim de Pão Amanhecido',
         ingredients: [
           'Pães amanhecidos',
           'Leite',
@@ -954,7 +954,7 @@ const categoriesData: Category[] = [
       },
       {
         id: 'pudim_de_pao_amanhecido',
-        name: 'Pudim de Pão Amanhecido (versão 1)',
+        name: 'Pudim de Pão Amanhecido',
         ingredients: [
           '3 pães pequenos amanhecidos',
           '500 ml de leite',
@@ -970,7 +970,7 @@ const categoriesData: Category[] = [
       },
       {
         id: 'pudim-pao-amanhecido-2',
-        name: 'Pudim de Pão Amanhecido (versão 2)',
+        name: 'Pudim de Pão Amanhecido',
         ingredients: [
           'Pães amanhecidos',
           'Leite',
