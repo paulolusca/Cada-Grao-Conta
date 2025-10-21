@@ -58,7 +58,7 @@ const About = () => {
         <div className="aspect-w-16 aspect-h-9">
           <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/fxmBcrb-kHk?si=siSw8WcuRNEiwGir"
+              src="https://www.youtube.com/embed/TuMRZOhfS70?si=5hGuwrWVbZJcuJf-"
               title="Dia Internacional da Conscientização contra o Desperdício de Alimentos e lançamento do aplicativo Cada Grão Conta"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
