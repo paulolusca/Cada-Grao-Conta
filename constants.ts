@@ -360,7 +360,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Refogar em pouco óleo o bacon, a cebola e o alho, nessa ordem. Jogar o ovo batido, com sal, e deixe fritar junto. Depois de frito, cortar o ovo em pedaços. Jogar as folhas de couve-flor no refogado, usando também os talos mais finos, se desejar. Colocar sal e espere abafar bem. Se necessário, adicionar um pouco de água. Adicionar a farinha de mandioca, mexer bem e colocar uma xícara de água com sal, uma colher de sopa de óleo e uma colher de sopa de azeite de oliva. Se a farofa estiver muito seca, adicionar mais água e óleo. Mexer bem e adicionar a pimenta do reino, servir a seguir.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://i.imgur.com/grZyHEr.jpeg',
+        image: 'https://i.imgur.com/HBXHCCF.jpeg',
         source: 'INSTITUTO BUTANTAN. Talos, cascas e sabores: Receitas do Circuito Butantan da Maior Idade. São Paulo: Instituto Butantan, 2017.'
       },
       {
@@ -638,7 +638,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Branqueie as folhas, recheie com arroz e carne, enrole como charuto e cozinhe em molho leve.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://i.imgur.com/gLeG0ry.jpeg',
+        image: 'https://i.imgur.com/ijwZbnD.jpeg',
         source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
       },
       {
@@ -754,7 +754,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Bata tudo no liquidificador, coloque em forma caramelizada e asse em banho-maria até firmar. Para fazer a calda, Em uma forma, adicione 2 xícaras de açúcar e leve ao forno até formar uma calda. Coloque o conteúdo do liquidificador na forma e leve ao forno.',
         category: 'Receitas de Família',
-        image: 'https://www.mococa.com.br/wp-content/uploads/2023/08/img-pudim.jpg',
+        image: 'https://i.imgur.com/7Bcgu2m.jpeg',
         source: 'Receita da família da Kethelyn Vale Pereira',
         extra: 'História: "Minha tia Cecília sempre fazia para a gente comer"'
       },
@@ -1000,7 +1000,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Em uma tigela, coloque os pães e cubra com o leite. Deixe de molho até que os pães fiquem bem macios e absorvam o leite. Amassar bem os pães com o leite até obter uma mistura homogênea. Adicione os ovos, a manteiga, a farinha de trigo, o açúcar e o óleo. Mexa bem. Por último, acrescente o fermento em pó e misture delicadamente. Unte uma forma com manteiga e despeje a massa. Leve ao forno pré-aquecido a 180°C por aproximadamente 40 minutos, ou até dourar e firmar. Deixe esfriar antes de desenformar e, se desejar, polvilhe coco ralado por cima.',
         category: 'Sobras Criativas',
-        image: 'https://static.itdg.com.br/images/360-240/ba68e781f9b13dab4569483686f2ac41/352648-original.jpg',
+        image: 'https://i.imgur.com/7Bcgu2m.jpeg',
         source: 'Receita da família de Ana Julia Batista da Silva',
         extra: 'História: "Minha bisavó fazia no café da manhã para o meu pai.\"'
       },
@@ -1016,7 +1016,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Monte em camadas o arroz, o molho e os recheios. Finalize com queijo e leve ao forno para gratinar.',
         category: 'Sobras Criativas',
-        image: 'https://i.imgur.com/7Nkgvzs.jpeg',
+        image: 'https://i.imgur.com/ekiGf2x.jpeg',
         source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
       }
     ]
