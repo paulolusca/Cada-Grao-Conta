@@ -624,7 +624,7 @@ const categoriesData: Category[] = [
         ],
         instructions: 'Refogue cebola e alho no óleo. Acrescente as folhas picadas, depois a farinha, mexa bem e sirva.',
         category: 'Cascas, Talos e Folhas',
-        image: 'https://i.imgur.com/3e8d1ed.jpeg',
+        image: 'https://i.imgur.com/HBXHCCF.jpeg',
         source: 'Receita pesquisada pelos estudantes do 3º Ano A. Fonte: SÃO PAULO (SP). Secretaria Municipal do Desenvolvimento Social. Receitas do Circuito Butantan da Maior Idade. São Paulo: SMDES, 2017.'
       },
       {
