@@ -6,7 +6,7 @@ const categoriesData: Category[] = [
     id: 'cascas-de-frutas',
     title: 'Cascas de Frutas',
     description: 'Não jogue as cascas fora! Descubra como transformar cascas de banana, abacaxi, laranja e outras frutas em bolos, doces e petiscos incríveis e cheios de nutrientes.',
-    image: 'https://i.imgur.com/vHqB3qf.jpeg',
+    image: 'https://i.imgur.com/8g3s5JY.jpeg',
     recipes: [
       {
         id: 'cascas_de_banana_a_milanesa',
@@ -741,7 +741,7 @@ const categoriesData: Category[] = [
     id: 'receitas-de-familia',
     title: 'Receitas de Família',
     description: 'Receitas que vieram das casas dos nossos estudantes, cheias de afeto, memórias e sabores especiais. Aqui a escola e a família cozinham juntas.',
-    image: 'https://i.imgur.com/i5Avlm3.jpeg',
+    image: 'https://i.imgur.com/HBXHCCF.jpeg',
     recipes: [
       {
         id: 'pudim-mais-gostoso',
@@ -878,7 +878,7 @@ const categoriesData: Category[] = [
     id: 'sobras-criativas',
     title: 'Sobras Criativas',
     description: 'O arroz de ontem, o pão amanhecido ou aquele restinho de carne podem virar pratos novos e deliciosos. Dê uma nova vida às suas sobras com criatividade e sabor.',
-    image: 'https://i.imgur.com/mO4t9nE.jpeg',
+    image: 'https://i.imgur.com/e3nf3UG.jpeg',
     recipes: [
       {
         id: 'cuscuz_de_sobras_de_peixe',
@@ -1025,7 +1025,7 @@ const categoriesData: Category[] = [
     id: 'sucos-e-bebidas',
     title: 'Sucos e Bebidas',
     description: 'Refresque-se de forma sustentável. Aprenda a fazer sucos, chás e águas aromatizadas usando cascas e partes de frutas que normalmente seriam descartadas.',
-    image: 'https://i.imgur.com/mC2Jg8f.jpeg',
+    image: 'https://i.imgur.com/gZTReiO.jpeg',
     recipes: [
       {
         id: 'cha_de_cascas_de_abacaxi',
