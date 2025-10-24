@@ -8,7 +8,13 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const About = () => {
   const images = [
+    'https://i.imgur.com/8FyIlCG.jpeg',
+    'https://i.imgur.com/0Q2JBat.jpeg',
+    'https://i.imgur.com/lmxiW1K.jpeg',
+    'https://i.imgur.com/r48EOS7.jpeg',
+    'https://i.imgur.com/LkSeUjV.jpeg',
     'https://i.imgur.com/9OcmEBT.jpeg',
+    'https://i.imgur.com/i192O1f.jpeg',
     'https://i.imgur.com/YySyotX.jpeg',
     'https://i.imgur.com/HxZjyv1.jpeg',
     'https://i.imgur.com/h9EvGFQ.jpeg',
