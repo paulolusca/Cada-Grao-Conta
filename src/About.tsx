@@ -37,45 +37,32 @@ const About = () => {
       <p className="text-brand-primary mb-4">
       O resultado desse percurso é o aplicativo “Cada Grão Conta”, que reúne receitas de reaproveitamento e de famílias, acompanhadas de dicas e histórias que valorizam tanto a memória quanto a sustentabilidade. Mais do que um produto digital, o app é a materialização de um processo pedagógico que mostrou às crianças e à comunidade que pequenas ações podem gerar grandes transformações. Afinal, cada grão realmente conta.
       </p>
-       <p className="text-brand-primary mb-4">
-      Nome dos Autores da pesquisa e produção do aplicativo:
-         ALEXANDRE ARANDES SILVA
-ALICE SANTOS DE VASCONCELLOS
-ALICE TORRES ULTRAMAR GIMENES
-ANA CLARA FREITAS RAMOS
-ANA JULIA BATISTA DA SILVA
-ARTHUR DOS SANTOS REIS
-BERNADO GABRIEL DA SILVA LIMA
-BERNARDO ISMAEL BONFIM GOUVEIA
-CARLOS EDUARDO SILVA
-DAVID MENEZES DA SILVA
-EMILLY VITORIA DOS SANTOS BACAGINE
-GABRIEL OLIVEIRA LOPES
-ISAAC KALEB TORQUATO PACHECO
-JOAO CARLOS ARAUJO DE SANTANA
-JOAO MIGUEL SANTANA BUORSCHIET ANTONIO
-JOAO PEDRO PONTUAL RAMOS
-KETHELYN VALE PEREIRA
-KEVIN GABRIEL FIGUEIREDO DA SILVA
-LARA EVANGELISTA DURAES
-LARISSA RODRIGUES GOUVEIA
-LIVIA CASSIANA RODRIGUES
-LORENA REIS DA SILVA
-LUCAS GABRIEL DIAS CERQUEIRA
-LUKAS MIGUEL TELMIRO DOS SANTOS
-MAISA VITORIA LOPES JESUS DA CONCEIÇÃO
-MARIA FERNANDA QUEIROZ DE ALMEIDA
-MIGUEL DE ALMEIDA FERREIRA
-MIKAELLY ALMEIDA DE FREITAS
-MILLENA SILVA DE LIMA
-PEDRO GABRIEL PEREIRA FIGUEIREDO
-PEDRO VIEIRA FERREIRA SALGADO
-PIETTRO MIGUELL OLIVEIRA CRUZ DE LIMA
-SOPHIA SCARLLET SOARES DUARTE
-VITOR MOURA VIANA
-BRUNO BARBOSA ALVES ALMEIDA
-ARTUR WILIAN AMARO DE ALMEIDA
-       </p>
+      <div className="mt-6">
+        <h3 className="text-xl font-semibold text-brand-primary mb-3">Nossos Pequenos Autores</h3>
+        <p className="text-brand-primary mb-4">
+          Este aplicativo é o resultado do trabalho, pesquisa e criatividade dos seguintes estudantes:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 bg-brand-secondary/10 p-4 rounded-lg">
+          {[
+            'ALEXANDRE ARANDES SILVA', 'ALICE SANTOS DE VASCONCELLOS', 'ALICE TORRES ULTRAMAR GIMENES',
+            'ANA CLARA FREITAS RAMOS', 'ANA JULIA BATISTA DA SILVA', 'ARTHUR DOS SANTOS REIS',
+            'BERNADO GABRIEL DA SILVA LIMA', 'BERNARDO ISMAEL BONFIM GOUVEIA', 'CARLOS EDUARDO SILVA',
+            'DAVID MENEZES DA SILVA', 'EMILLY VITORIA DOS SANTOS BACAGINE', 'GABRIEL OLIVEIRA LOPES',
+            'ISAAC KALEB TORQUATO PACHECO', 'JOAO CARLOS ARAUJO DE SANTANA', 'JOAO MIGUEL SANTANA BUORSCHIET ANTONIO',
+            'JOAO PEDRO PONTUAL RAMOS', 'KETHELYN VALE PEREIRA', 'KEVIN GABRIEL FIGUEIREDO DA SILVA',
+            'LARA EVANGELISTA DURAES', 'LARISSA RODRIGUES GOUVEIA', 'LIVIA CASSIANA RODRIGUES',
+            'LORENA REIS DA SILVA', 'LUCAS GABRIEL DIAS CERQUEIRA', 'LUKAS MIGUEL TELMIRO DOS SANTOS',
+            'MAISA VITORIA LOPES JESUS DA CONCEIÇÃO', 'MARIA FERNANDA QUEIROZ DE ALMEIDA', 'MIGUEL DE ALMEIDA FERREIRA',
+            'MIKAELLY ALMEIDA DE FREITAS', 'MILLENA SILVA DE LIMA', 'PEDRO GABRIEL PEREIRA FIGUEIREDO',
+            'PEDRO VIEIRA FERREIRA SALGADO', 'PIETTRO MIGUELL OLIVEIRA CRUZ DE LIMA', 'SOPHIA SCARLLET SOARES DUARTE',
+            'VITOR MOURA VIANA', 'BRUNO BARBOSA ALVES ALMEIDA', 'ARTUR WILIAN AMARO DE ALMEIDA'
+          ].map((name, index) => (
+            <p key={index} className="text-brand-primary font-medium tracking-wide">
+              {name}
+            </p>
+          ))}
+        </div>
+      </div>
       <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Galeria de Fotos do Projeto</h3>
       <Swiper
         modules={[Navigation, Pagination]}
