@@ -9,7 +9,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 const About = () => {
   const images = [
     'https://i.imgur.com/8FyIlCG.jpeg',
-    'https://i.imgur.com/0Q2JBat.jpeg',
     'https://i.imgur.com/lmxiW1K.jpeg',
     'https://i.imgur.com/r48EOS7.jpeg',
     'https://i.imgur.com/LkSeUjV.jpeg',
