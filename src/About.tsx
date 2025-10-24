@@ -25,6 +25,10 @@ const About = () => {
     'https://i.imgur.com/859nod5.jpeg',
     'https://i.imgur.com/jMU4Ckn.jpeg',
     'https://i.imgur.com/NIcPNp8.jpeg',
+    'https://i.imgur.com/s3p0hQG.jpeg',
+    'https://i.imgur.com/60Ih53Y.jpeg',
+    'https://i.imgur.com/ht63045.jpeg',
+    'https://i.imgur.com/1r4l1sc.jpeg',
     'https://i.imgur.com/H054w76.jpeg'
   ];
 
