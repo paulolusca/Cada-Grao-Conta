@@ -1208,6 +1208,16 @@ export const repurposingTips: string[] = [
 
 export const educationalVideos: EducationalVideo[] = [
     {
+        id: '41GrSDnwKcU',
+        title: 'Conversa com as nutricionistas de nossa escola sobre alimentação sustentável',
+        description: 'Neste dia, recebemos a visita das nutricionistas da empresa que administra a alimentação escolar em nossa escola. Os estudantes tiveram a oportunidade aprender mais sobre a alimentação sustentável e o problema do desperdício de alimentos. Também provaram a receita presente no aplicativo de brigadeiro de casca de banana.'
+    },
+   {
+        id: '_tnT4JINgh4',
+        title: 'Apresentando nosso aplicativo',
+        description: 'O aplicativo “Cada Grão Conta” nasceu como parte de um projeto pedagógico desenvolvido com os estudantes do 3º Ano A da Escola do Futuro ETI Padre Geraldo MC Cluskey, inspirado pelo desafio de unir sustentabilidade, protagonismo infantil e participação da comunidade escolar. A proposta surgiu da necessidade de refletir sobre o desperdício de alimentos na escola e de criar estratégias para transformá-lo em aprendizado significativo, dentro e fora da sala de aula.'
+    },
+  {
         id: 'eLq3GzSDnZc',
         title: 'Desperdício de Alimentos',
         description: 'Somos 8 bilhões de pessoas no mundo, e todas precisam comer diariamente. A produção de alimentação já é suficiente para todos, porém, 1 bilhão de pessoas ainda sofrem com a fome. E parte disso se deve ao desperdício'
