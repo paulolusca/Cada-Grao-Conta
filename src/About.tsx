@@ -103,8 +103,8 @@ const About = () => {
         <div className="aspect-w-16 aspect-h-9">
           <iframe
               className="w-full h-full rounded-lg"
-              src="https://youtube.com/shorts/TuMRZOhfS70"
-              title="Cada Grão Conta"
+              src="https://www.youtube.com/embed/_tnT4JINgh4?si=CcfnYz1fVpUtXw_P"
+              title="Apresentando o aplicativo Cada Grão Conta"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
