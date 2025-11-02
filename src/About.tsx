@@ -110,6 +110,16 @@ const About = () => {
               allowFullScreen
           ></iframe>
         </div>
+        <div className="aspect-w-16 aspect-h-9">
+          <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/6rP-A8VlVLc?si=7tvL5r9Oxl7jn2mV"
+              title="Dia do Prato Limpo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );
