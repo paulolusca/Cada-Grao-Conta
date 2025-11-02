@@ -111,6 +111,24 @@ const About = () => {
           ></iframe>
         </div>
       </div>
+
+      <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Portfólio</h3>
+      <div className="relative w-full rounded-lg overflow-hidden shadow-sm" style={{ paddingBottom: '65.79%' }}>
+        <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://sway.cloud.microsoft.com/s/i0T4GQupnJPYkjt4/embed"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts"
+            scrolling="no"
+            style={{ border: 'none' }}
+            allowFullScreen
+            mozallowfullscreen="true"
+            msallowfullscreen="true"
+            webkitallowfullscreen="true"
+        ></iframe>
+      </div>
     </div>
   );
 };
