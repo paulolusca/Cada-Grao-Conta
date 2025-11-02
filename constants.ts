@@ -1207,7 +1207,12 @@ export const repurposingTips: string[] = [
 ];
 
 export const educationalVideos: EducationalVideo[] = [
-    {
+  {
+        id: '6rP-A8VlVLc',
+        title: 'Dia do Prato Limpo',
+        description: 'Intervenção no Refeitório da Escola para conscientização dos estudantes que aconteceu no Dia 29 de Setembro de  2025, Dia Internacional da Conscientização contra o Desperdício de Alimentos.'
+    }, 
+  {
         id: '41GrSDnwKcU',
         title: 'Conversa com as nutricionistas de nossa escola sobre alimentação sustentável',
         description: 'Neste dia, recebemos a visita das nutricionistas da empresa que administra a alimentação escolar em nossa escola. Os estudantes tiveram a oportunidade aprender mais sobre a alimentação sustentável e o problema do desperdício de alimentos. Também provaram a receita presente no aplicativo de brigadeiro de casca de banana.'
