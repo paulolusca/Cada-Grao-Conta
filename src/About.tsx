@@ -1,36 +1,10 @@
 import React from 'react';
 import { getResizedImgurUrl } from './utils';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
 
 const About = () => {
-  const images = [
-    'https://i.imgur.com/8FyIlCG.jpeg',
-    'https://i.imgur.com/lmxiW1K.jpeg',
-    'https://i.imgur.com/r48EOS7.jpeg',
-    'https://i.imgur.com/LkSeUjV.jpeg',
-    'https://i.imgur.com/9OcmEBT.jpeg',
-    'https://i.imgur.com/i192O1f.jpeg',
-    'https://i.imgur.com/YySyotX.jpeg',
-    'https://i.imgur.com/HxZjyv1.jpeg',
-    'https://i.imgur.com/h9EvGFQ.jpeg',
-    'https://i.imgur.com/QfRJkym.jpeg',
-    'https://i.imgur.com/UHIj9Ru.jpeg',
-    'https://i.imgur.com/3O8JeLv.jpeg',
-    'https://i.imgur.com/jsA9w8H.jpeg',
-    'https://i.imgur.com/859nod5.jpeg',
-    'https://i.imgur.com/jMU4Ckn.jpeg',
-    'https://i.imgur.com/NIcPNp8.jpeg',
-    'https://i.imgur.com/s3p0hQG.jpeg',
-    'https://i.imgur.com/60Ih53Y.jpeg',
-    'https://i.imgur.com/ht63045.jpeg',
-    'https://i.imgur.com/1r4l1sc.jpeg',
-    'https://i.imgur.com/H054w76.jpeg'
-  ];
-
   return (
     <div className="p-4 md:p-6">
       <h2 className="text-2xl font-bold text-brand-primary mb-4">Sobre o Projeto</h2>
@@ -72,22 +46,6 @@ const About = () => {
           ))}
         </div>
       </div>
-      <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Galeria de Fotos do Projeto</h3>
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        className="rounded-lg overflow-hidden"
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={getResizedImgurUrl(image, 'l')} alt={`Foto do projeto ${index + 1}`} className="w-full h-64 object-contain" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
       <h3 className="text-xl font-semibold text-brand-primary mt-6 mb-3">Vídeos</h3>
       <div className="space-y-4">
         <div className="aspect-w-16 aspect-h-9">
