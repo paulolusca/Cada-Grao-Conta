@@ -4,7 +4,7 @@ import type { User } from 'firebase/auth';
 import type { Unsubscribe } from 'firebase/firestore';
 import { 
     Home, 
-    Lightbulb, 
+    Info,
     Youtube, 
     Heart, 
     BookHeart, 
@@ -19,8 +19,10 @@ import {
 } from 'lucide-react';
 
 import { Recipe, Category, Tab, ViewMode } from './types';
-import { categoriesData, allRecipes, repurposingTips, educationalVideos } from './constants';
+import { categoriesData, allRecipes, educationalVideos } from './constants';
 import * as firebaseService from './services/firebaseService';
+import { getResizedImgurUrl } from './src/utils';
+import About from './src/About';
 
 // Declare global variable for html2pdf library
 declare const html2pdf: any;
@@ -66,7 +68,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onClick }) => (
         aria-label={`Ver receita: ${recipe.name}`}
         className="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500"
     >
-        <img className="h-40 w-full object-cover" src={recipe.image} alt={recipe.name} />
+        <img className="h-40 w-full object-cover" src={getResizedImgurUrl(recipe.image, 'm')} alt={recipe.name} />
         <div className="p-4">
             <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
         </div>
@@ -225,11 +227,27 @@ export default function App() {
 
 
     // ======== RENDER LOGIC ======== //
+
+    const mobileSearchBar = (
+        <div className="md:hidden mb-4 relative">
+            <Search className="w-5 h-5 text-gray-400 absolute top-1/2 left-3 -translate-y-1/2" />
+            <input
+                type="text"
+                placeholder="Buscar por nome ou ingrediente..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-white border border-gray-300 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-amber-500 text-brand-primary"
+                aria-label="Buscar por nome ou ingrediente da receita"
+            />
+        </div>
+    );
+
     const renderContent = () => {
         // Search results view takes priority
         if (searchQuery) {
             return (
                 <div className="p-4 md:p-6">
+                    {mobileSearchBar}
                     <h2 className="text-2xl font-bold text-brand-primary mb-4">Resultados da Busca</h2>
                     {filteredRecipes.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -249,7 +267,7 @@ export default function App() {
             const isFavorited = favoriteRecipeIds.has(selectedRecipe.id);
             return (
                  <div className="p-4 md:p-6" id={`recipe-pdf-content-${selectedRecipe.id}`}>
-                    <img src={selectedRecipe.image} alt={selectedRecipe.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"/>
+                    <img src={getResizedImgurUrl(selectedRecipe.image, 'l')} alt={selectedRecipe.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"/>
                     <h2 className="text-3xl font-bold text-brand-primary mb-2">{selectedRecipe.name}</h2>
                     <p className="text-brand-secondary font-medium mb-4">{selectedRecipe.category}</p>
 
@@ -301,36 +319,27 @@ export default function App() {
         switch (activeTab) {
             case 'home':
                 return (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 p-4 md:p-6">
-                        {categoriesData.map(cat => (
-                            <div key={cat.id} onClick={() => handleSelectCategory(cat)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleSelectCategory(cat)} aria-label={`Ver categoria ${cat.title}`} className="relative rounded-xl overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                <img src={cat.image} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
-                                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-                                    <h3 className="text-white font-bold text-xl">{cat.title}</h3>
-                                    <p className="hidden md:block text-gray-200 text-sm">{cat.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                );
-            case 'tips':
-                return (
                     <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Dicas de Reaproveitamento</h2>
-                        <ul className="space-y-4">
-                            {repurposingTips.map((tip, index) => (
-                                <li key={index} className="flex items-start bg-white p-4 rounded-xl shadow-sm">
-                                    <Lightbulb className="w-6 h-6 text-amber-500 mr-4 mt-1 flex-shrink-0" />
-                                    <p className="text-brand-primary">{tip}</p>
-                                </li>
+                        {mobileSearchBar}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            {categoriesData.map(cat => (
+                                <div key={cat.id} onClick={() => handleSelectCategory(cat)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleSelectCategory(cat)} aria-label={`Ver categoria ${cat.title}`} className="relative rounded-xl overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <img src={getResizedImgurUrl(cat.image, 'm')} alt={cat.title} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
+                                        <h3 className="text-white font-bold text-xl">{cat.title}</h3>
+                                        <p className="hidden md:block text-gray-200 text-sm">{cat.description}</p>
+                                    </div>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                 );
+            case 'about':
+                return <About />;
             case 'videos':
                 return (
                      <div className="p-4 md:p-6">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Vídeos Educativos</h2>
+                        <h2 className="text-2xl font-bold text-brand-primary mb-4">Vídeos</h2>
                         <div className="space-y-6">
                             {educationalVideos.map(video => (
                                 <div key={video.id} className="bg-white p-4 rounded-xl shadow-sm overflow-hidden">
@@ -360,7 +369,7 @@ export default function App() {
                                 {favoriteRecipes.map(recipe => (
                                     <div key={recipe.id} className="bg-white p-3 rounded-xl shadow-sm flex items-center justify-between">
                                         <div className="flex items-center" onClick={() => handleSelectRecipe(recipe)} >
-                                          <img src={recipe.image} alt={recipe.name} className="w-16 h-16 object-cover rounded-lg mr-4 cursor-pointer"/>
+                                          <img src={getResizedImgurUrl(recipe.image, 's')} alt={recipe.name} className="w-16 h-16 object-cover rounded-lg mr-4 cursor-pointer"/>
                                           <div className="cursor-pointer">
                                               <h3 className="font-semibold text-brand-primary">{recipe.name}</h3>
                                               <p className="text-sm text-gray-500">{recipe.category}</p>
@@ -388,8 +397,8 @@ export default function App() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4 font-inter">
-            <div className={`relative flex flex-col bg-brand-bg shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${viewMode === 'mobile' ? 'w-full max-w-sm h-[90vh]' : 'w-full max-w-5xl min-h-[85vh]'}`}>
+        <div className="flex flex-col items-center justify-center h-dvh bg-gray-800 p-4 font-inter">
+            <div className={`relative flex flex-col bg-brand-bg shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${viewMode === 'mobile' ? 'w-full max-w-sm h-full' : 'w-full max-w-5xl h-[95vh]'}`}>
                 {/* Header */}
                  <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200 w-full flex-shrink-0">
                     { (selectedCategory || selectedRecipe) && (
@@ -443,7 +452,7 @@ export default function App() {
                 <footer className="flex-shrink-0 border-t border-gray-200 bg-white p-1">
                     <nav className="flex justify-around">
                         <NavItem icon={<Home />} label="Início" isActive={activeTab === 'home'} onClick={() => handleNavigation('home')} />
-                        <NavItem icon={<Lightbulb />} label="Sobre" isActive={activeTab === 'tips'} onClick={() => handleNavigation('tips')} />
+                        <NavItem icon={<Info />} label="Sobre" isActive={activeTab === 'about'} onClick={() => handleNavigation('about')} />
                         <NavItem icon={<Youtube />} label="Vídeos" isActive={activeTab === 'videos'} onClick={() => handleNavigation('videos')} />
                         <NavItem icon={<BookHeart />} label="Receitas" isActive={activeTab === 'favorites'} onClick={() => handleNavigation('favorites')} />
                         <a href="https://forms.gle/your-google-form-link-here" target="_blank" rel="noopener noreferrer" aria-label="Contribuir com uma receita, abre em nova aba" className="flex flex-col items-center justify-center w-full pt-2 pb-1 text-brand-secondary hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
